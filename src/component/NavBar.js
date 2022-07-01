@@ -100,7 +100,7 @@ function DesktopNav(props) {
         px={10}
         boxShadow={shadow}
         fontWeight='400'
-        fontSize='2.1vw'
+        fontSize='min(2.1vw, 25px)'
         lineHeight='27px'
         pos="relative"
         {...props}
