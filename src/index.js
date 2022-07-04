@@ -5,6 +5,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { ColorModeScript } from '@chakra-ui/react'
 
 import Banque from "./routes/Banque";
 import Logement from "./routes/Logement";
@@ -13,12 +14,14 @@ import Mission from "./routes/Mission";
 import Equipe from "./routes/Equipe";
 import Contact from "./routes/Contact";
 
+import theme from './theme';
 import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="banque" element={<Banque />} />

@@ -8,7 +8,6 @@ import NavBar from "./component/NavBar"
 function App() {
   return (
     <ChakraProvider>
-      <h1>Hello</h1>
       <NavBar/>
       <Outlet/>
     </ChakraProvider>
