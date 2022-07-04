@@ -1,23 +1,17 @@
 import React from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { ChakraProvider } from '@chakra-ui/react'
 
+import NavBar from "./component/NavBar"
 
 
 function App() {
   return (
-    <div className="App">
+    <ChakraProvider>
       <h1>Hello</h1>
-      <nav>
-        <Link to="/banque">Banuqe</Link>
-        {"    "}
-        <Link to="/logement">Logement</Link>
-        <Link to="/mobilite">Mobilité</Link>
-        <Link to="/mission">Notre Mission</Link>
-        <Link to="/equipe">L'équipe</Link>
-        <Link to="/contact">Contacts</Link>
-      </nav>
+      <NavBar/>
       <Outlet/>
-    </div>
+    </ChakraProvider>
   );
 }
 
