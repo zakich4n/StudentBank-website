@@ -3,9 +3,9 @@ import {
     Box,
     Flex,
     Image,
-    Text,
+
     Spacer,
-    Link /* as ChakraLink */,
+    Link,
     Stack,
     useColorModeValue
 } from '@chakra-ui/react';
@@ -53,12 +53,9 @@ export default function NavBar() {
             bg={background_color}
             px={10}
             boxShadow={shadow}
-           /*  sx={{
-                    'font-style': 'normal',
-                    'font-weight': 400,
-                    'font-size': '23px',
-                    'line-height': '27px',
-            }} */
+            fontWeight='400'
+            fontSize='23px'
+            lineHeight='27px'
         >
             <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
             <Image boxSize='262px' h='100px' pt={3}  src="logo SB.png" />
@@ -79,7 +76,7 @@ export default function NavBar() {
         <Flex spacing={4}> 
             <Spacer/>
             <LanguageSwitcher boxShadow={shadow} borderTopRadius={0} mr={3} bg={background_color}/>
-            <ColorModeSwitcher boxShadow={shadow} borderTopRadius={0} mr={3} bg={background_color} />
+            <ColorModeSwitcher boxShadow={shadow} borderTopRadius={0} mr={3} bg={background_color}/>
         </Flex>
        
     </Box>

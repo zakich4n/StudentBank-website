@@ -8,12 +8,14 @@ import {
     Button,
     Stack,
     Flex,
+    useColorModeValue
   } from '@chakra-ui/react';
   
-  import { BsThreeDotsVertical, BsChatSquareQuote } from 'react-icons/bs';
+  import { BsThreeDotsVertical } from 'react-icons/bs';
   import { FaRegFlag } from 'react-icons/fa';
   
   export default function ServerSecondaryOptions(props) {
+    const background_color=useColorModeValue('white','rgba(53, 53, 53, 1)');
     return (
       /**
        * You may move the Popover outside Flex.
@@ -29,7 +31,7 @@ import {
               {...props}
             />
           </PopoverTrigger>
-          <PopoverContent w="fit-content" _focus={{ boxShadow: 'none' }}>
+          <PopoverContent w="fit-content" _focus={{ boxShadow: 'none' }} bg={ background_color}>
             <PopoverArrow />
             <PopoverBody>
               <Stack>
