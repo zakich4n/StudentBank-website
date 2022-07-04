@@ -11,10 +11,10 @@ function App() {
         <Link to="/banque">Banuqe</Link>
         {"    "}
         <Link to="/logement">Logement</Link>
-{/*         <Link to="/mobilite">Mobilité</Link>
+        <Link to="/mobilite">Mobilité</Link>
         <Link to="/mission">Notre Mission</Link>
         <Link to="/equipe">L'équipe</Link>
-        <Link to="/contacts">Contacts</Link> */}
+        <Link to="/contact">Contacts</Link>
       </nav>
       <Outlet/>
     </div>
