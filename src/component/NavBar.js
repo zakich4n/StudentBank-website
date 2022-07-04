@@ -58,7 +58,10 @@ export default function NavBar() {
             lineHeight='27px'
         >
             <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
-            <Image boxSize='262px' h='100px' pt={3}  src="logo SB.png" />
+            <Link as={ReachLink} to="/">
+                <Image boxSize='262px' h='100px' pt={3}  src="logo SB.png" />
+            </Link>
+            
 
             <Flex alignItems={'center'}>
                 <Stack direction={'row'}>

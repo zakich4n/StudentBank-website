@@ -7,9 +7,10 @@ import NavBar from "./component/NavBar"
 
 function App() {
   return (
-    <ChakraProvider>
-      <NavBar/>
-      <Outlet/>
+    <ChakraProvider>  
+      <NavBar/> 
+      <Outlet/> 
+      <h1>OUI</h1>
     </ChakraProvider>
   );
 }
