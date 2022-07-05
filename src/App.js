@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react'
 
 import NavBar from "./component/NavBar"
+import Footer from "./component/Footer"
+
 
 
 function App() {
@@ -11,6 +13,7 @@ function App() {
       <NavBar/> 
       <Outlet/> 
       <h1>OUI</h1>
+      <Footer/>
     </ChakraProvider>
   );
 }
