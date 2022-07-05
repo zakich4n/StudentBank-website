@@ -18,9 +18,8 @@ import {
         preserveAspectRatio="xMidYMid meet"
         {...props}
         >
-       
        <g transform="translate(0.000000,207.000000) scale(0.100000,-0.100000)"
-       fill="#000000" stroke="none">
+       fill={useColorModeValue('#000000','#FFFFFF')} stroke="none">
        <path d="M4538 1523 l-3 -526 -123 182 -124 182 -91 -3 -92 -3 -3 -667 -2
        -668 95 0 95 0 2 518 3 517 120 -177 120 -177 98 -1 97 0 0 675 0 675 -95 0
        -95 0 -2 -527z m140 289 c8 -10 12 -50 12 -111 0 -103 -12 -131 -56 -131 -45
@@ -131,7 +130,7 @@ import {
             <Logo height='70px'/>
           </Flex>
           <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-            © 2022 Chakra Templates. All rights reserved
+            Made with ❤️ at StudentBank
           </Text>
         </Box>
       </Box>
