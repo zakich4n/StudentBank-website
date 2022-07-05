@@ -1,4 +1,4 @@
-import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text, AspectRatio} from "@chakra-ui/react";
+import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text} from "@chakra-ui/react";
 
 export default function Accueil() {
     return (

@@ -42,13 +42,15 @@ const Navigation=[
         link : "/contact"
     }]
 
-export default function NavBar() {
+export default function NavBar(props) {
 
     const background_color=useColorModeValue('white','rgba(53, 53, 53, 1)');
     const shadow=useColorModeValue('xl','dark-lg');
 
     return(
-    <Box  h={90} pos='absolute' w='100%'>
+    <Box  h={90} w='100%'
+    {...props}
+    >
         <Box 
             bg={background_color}
             px={10}

@@ -13,7 +13,7 @@ function App() {
       <Box
         /* bgGradient={bgGrad} */
       >
-        <NavBar/> 
+        <NavBar pos='absolute' /> 
         <Outlet/>
       </Box>
     </ChakraProvider>
