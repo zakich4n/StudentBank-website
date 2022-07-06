@@ -9,10 +9,8 @@ import NavBar from "./component/NavBar"
 function App() {
   return (
     <ChakraProvider>  
-      <Box>
         <NavBar pos='absolute' /> 
         <Outlet/>
-      </Box>
     </ChakraProvider>
   );
 }
