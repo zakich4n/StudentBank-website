@@ -40,15 +40,20 @@ const Navigation=[
     {
         name : "Contact",
         link : "/contact"
-    }
-]
+    }]
 
-export default function NavBar() {
+export default function NavBar(props) {
+
     const background_color=useColorModeValue('white','rgba(53, 53, 53, 1)');
     const shadow=useColorModeValue('xl','dark-lg');
 
     return(
-    <Box  h={90}>
+    <Box  h={10} w='100%'
+    position='sticky'
+    top='0'
+    {...props}
+
+    >
         <Box 
             bg={background_color}
             px={10}

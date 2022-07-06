@@ -7,12 +7,12 @@ import Footer from "./component/Footer"
 
 
 
+
 function App() {
   return (
     <ChakraProvider>  
       <NavBar/> 
       <Outlet/> 
-      <h1>OUI</h1>
       <Footer/>
     </ChakraProvider>
   );
