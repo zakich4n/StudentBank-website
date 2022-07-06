@@ -6,10 +6,16 @@ import {
     Stack,
     Text,
     Flex,
-    Tag,
+    Icon,
     useColorModeValue,
+    HStack
   } from '@chakra-ui/react';
-  import { ReactNode } from 'react';
+  import {
+    BsFacebook,
+    BsInstagram,
+    BsLinkedin
+  } from 'react-icons/bs'
+
   
   const Logo = (props) => {
     return (
@@ -80,7 +86,10 @@ import {
     return (
       <Box
         bg={useColorModeValue('gray.50', 'gray.900')}
-        color={useColorModeValue('gray.700', 'gray.200')}>
+        color={useColorModeValue('gray.700', 'gray.200')}
+        pos='static'
+        width='100%'
+        bottom='0'>
         <Container as={Stack} maxW={'6xl'} py={10}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
             <Stack align={'flex-start'}>
@@ -104,9 +113,20 @@ import {
             </Stack>
             <Stack align={'flex-start'}>
               <ListHeader>SUIVEZ-NOUS</ListHeader>
-              <Link href={'#'}>Facebook</Link>
-              <Link href={'#'}>Twitter</Link>
+              {/* <Link href={'#'}>Facebook</Link>
               <Link href={'#'}>Instagram</Link>
+              <Link href={'#'}>LinkedIn</Link> */}
+              <HStack spacing='15px' >
+                <Link>
+                    <Icon as={BsFacebook}  boxSize={8}/>
+                </Link>
+                <Link>
+                    <Icon as={BsInstagram}  boxSize={8}/>
+                </Link>
+                <Link>
+                    <Icon as={BsLinkedin}  boxSize={8}/>
+                </Link>
+              </HStack>
             </Stack>
           </SimpleGrid>
         </Container>
@@ -115,15 +135,11 @@ import {
             align={'center'}
             _before={{
               content: '""',
-              borderBottom: '1px solid',
-              borderColor: useColorModeValue('gray.200', 'gray.700'),
               flexGrow: 1,
               mr: 8,
             }}
             _after={{
               content: '""',
-              borderBottom: '1px solid',
-              borderColor: useColorModeValue('gray.200', 'gray.700'),
               flexGrow: 1,
               ml: 8,
             }}>
