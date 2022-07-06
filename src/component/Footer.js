@@ -130,7 +130,7 @@ import {
             </Stack>
           </SimpleGrid>
         </Container>
-        <Box py={10}>
+        <Box py={4}>
           <Flex
             align={'center'}
             _before={{
