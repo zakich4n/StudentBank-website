@@ -41,33 +41,33 @@ export default function Accueil() {
                         
                     </Box>
 
-                    <Box w='100%' h='863px'> {/* Gérer vos dépsnes */}
+                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Gérer vos dépsnes */}
                          <Grid
                             h='863px'
                             templateRows='repeat(5, 1fr)'
                             templateColumns='repeat(5, 1fr)'
                             gap={4}
                             >
-                            <GridItem rowSpan={1} colSpan={5} bg='tomato'>
+                            <GridItem rowSpan={1} colSpan={5} >
                                 <Center h='100%'>
                                     <Heading as='h2' size='2xl'>Gérer vos dépenses</Heading>
                                 </Center>
                             </GridItem>
-                            <GridItem rowSpan={4} colSpan={3} bg='papayawhip'>
+                            <GridItem rowSpan={4} colSpan={3} >
                                 Telephone
                             </GridItem>
-                            <GridItem rowSpan={1} colSpan={1} bg='papayawhip' pos='relative'>
+                            <GridItem rowSpan={1} colSpan={1}  pos='relative'>
                                 <Heading size='xl' bottom='10' pos='absolute'>
                                     Banque
                                 </Heading>
                             </GridItem>
-                            <GridItem rowSpan={2} colSpan={2} bg='tomato'>
+                            <GridItem rowSpan={2} colSpan={2} >
                                 <Text fontSize='xl'>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
-                            <GridItem rowSpan={1} colSpan={1} bg='papayawhip' pos='relative' justifyContent='center'>
+                            <GridItem rowSpan={1} colSpan={1}  pos='relative' justifyContent='center'>
                                 <Center bottom='10' pos='absolute'>
                                     <Button>Ouvrir mon compte</Button>
                                 </Center>
@@ -75,7 +75,7 @@ export default function Accueil() {
                         </Grid>
                     </Box>
 
-                    <Box w='100%' h='863px'> {/* Votre carte bancaire */}
+                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Votre carte bancaire */}
                          <Grid
                             h='863px'
                             templateAreas={`"header header header header"
@@ -87,55 +87,55 @@ export default function Accueil() {
                             templateColumns='repeat(3, 1fr)'
                             gap={4}
                             >
-                            <GridItem bg='tomato' area={'header'}>
+                            <GridItem  area={'header'}>
                                 <Center h='100%'>
                                     <Heading as='h2' size='2xl'>Votre carte bancaire</Heading>
                                 </Center>
                             </GridItem>
-                            <GridItem bg='papayawhip' pos='relative' area={'titre'}>
+                            <GridItem  pos='relative' area={'titre'}>
                                 <Heading size='xl' bottom='10' pos='absolute'>
                                     Banque
                                 </Heading>
                             </GridItem>
-                            <GridItem bg='tomato' area={'descrip'}>
+                            <GridItem  area={'descrip'}>
                                 <Text fontSize='xl'>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
-                            <GridItem rowSpan={4} colSpan={2} bg='papayawhip' area={'image'}>
+                            <GridItem rowSpan={4} colSpan={2}  area={'image'}>
                                 CB
                             </GridItem>
                         </Grid>
                     </Box>
 
-                    <Box w='100%' h='863px'> {/* Vos avantages */}
+                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Vos avantages */}
                          <Grid
                             h='863px'
                             templateRows='repeat(5, 1fr)'
                             templateColumns='repeat(5, 1fr)'
                             gap={4}
                             >
-                            <GridItem rowSpan={1} colSpan={5} bg='tomato'>
+                            <GridItem rowSpan={1} colSpan={5} >
                                 <Center h='100%'>
                                     <Heading as='h2' size='2xl'>Vos avantages</Heading>
                                 </Center>
                             </GridItem>
-                            <GridItem rowSpan={4} colSpan={3} bg='papayawhip'>
+                            <GridItem rowSpan={4} colSpan={3} >
                                 Telephone
                             </GridItem>
-                            <GridItem rowSpan={1} colSpan={1} bg='papayawhip' pos='relative'>
+                            <GridItem rowSpan={1} colSpan={1}  pos='relative'>
                                 <Heading size='xl' bottom='10' pos='absolute'>
                                     Réduction
                                 </Heading>
                             </GridItem>
-                            <GridItem rowSpan={2} colSpan={2} bg='tomato'>
+                            <GridItem rowSpan={2} colSpan={2} >
                                 <Text fontSize='xl'>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
-                            <GridItem rowSpan={1} colSpan={1} bg='papayawhip' pos='relative' justifyContent='center'>
+                            <GridItem rowSpan={1} colSpan={1}  pos='relative' justifyContent='center'>
                                 <Center bottom='10' pos='absolute'>
                                     <Button>Voir mes avantages</Button>
                                 </Center>
@@ -143,7 +143,7 @@ export default function Accueil() {
                         </Grid>
                     </Box>
 
-                    <Box w='100%' h='863px'> {/* Aide à la lacoation */}
+                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Aide à la lacoation */}
                          <Grid
                             h='863px'
                             templateAreas={`"header header header header"
@@ -155,55 +155,55 @@ export default function Accueil() {
                             templateColumns='repeat(3, 1fr)'
                             gap={4}
                             >
-                            <GridItem bg='tomato' area={'header'}>
+                            <GridItem  area={'header'}>
                                 <Center h='100%'>
                                     <Heading as='h2' size='2xl'>Aide à la lacoation</Heading>
                                 </Center>
                             </GridItem>
-                            <GridItem bg='papayawhip' pos='relative' area={'titre'}>
+                            <GridItem  pos='relative' area={'titre'}>
                                 <Heading size='xl' bottom='10' pos='absolute'>
                                     Louer
                                 </Heading>
                             </GridItem>
-                            <GridItem bg='tomato' area={'descrip'}>
+                            <GridItem  area={'descrip'}>
                                 <Text fontSize='xl'>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
-                            <GridItem rowSpan={4} colSpan={2} bg='papayawhip' area={'image'}>
+                            <GridItem rowSpan={4} colSpan={2}  area={'image'}>
                                 CB
                             </GridItem>
                         </Grid>
                     </Box>
 
-                    <Box w='100%' h='863px'> {/* International */}
+                    <Box w='100%' h='863px' pl={10} pr={10}> {/* International */}
                          <Grid
                             h='863px'
                             templateRows='repeat(5, 1fr)'
                             templateColumns='repeat(5, 1fr)'
                             gap={4}
                             >
-                            <GridItem rowSpan={1} colSpan={5} bg='tomato'>
+                            <GridItem rowSpan={1} colSpan={5} >
                                 <Center h='100%'>
                                     <Heading as='h2' size='2xl'>Partir à l'international</Heading>
                                 </Center>
                             </GridItem>
-                            <GridItem rowSpan={4} colSpan={3} bg='papayawhip'>
+                            <GridItem rowSpan={4} colSpan={3} >
                                 Telephone
                             </GridItem>
-                            <GridItem rowSpan={1} colSpan={1} bg='papayawhip' pos='relative'>
+                            <GridItem rowSpan={1} colSpan={1}  pos='relative'>
                                 <Heading size='xl' bottom='10' pos='absolute'>
                                     Voyage
                                 </Heading>
                             </GridItem>
-                            <GridItem rowSpan={2} colSpan={2} bg='tomato'>
+                            <GridItem rowSpan={2} colSpan={2} >
                                 <Text fontSize='xl'>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
-                            <GridItem rowSpan={1} colSpan={1} bg='papayawhip' pos='relative' justifyContent='center'>
+                            <GridItem rowSpan={1} colSpan={1}  pos='relative' justifyContent='center'>
                                 <Center bottom='10' pos='absolute'>
                                     <Button>Partir à l'étranger</Button>
                                 </Center>
