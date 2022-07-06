@@ -6,25 +6,38 @@ import { extendTheme } from '@chakra-ui/react'
 import { SimpleGrid } from "@chakra-ui/react"
 
 
+const breakpoints = {
+  sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+}
+
+// 3. Extend the theme
+const theme = extendTheme({ breakpoints })
+
 
 const innerBoxStyles = {
     display: 'flex',
     justifyContent: 'center',
     bgPosition: 'center',
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
     fontSize: '48px',
     p: '6%'
 }
 
 
-export default function Mobilite(){
+export default function Application(){
   return (
     <div align='center'>
         <Box display='block'
             alignItems='center'
             justifyContent='center'
-            bgImage = "url('logo_light.png')" 
+            width='100%'
+            height='100vh'
+            bgImage = "url('logo.png')" 
             bgPosition="center" 
             bgRepeat="no-repeat"
             bgSize='cover'>
@@ -44,8 +57,12 @@ export default function Mobilite(){
                     </Link>
                 </Box>
             </VStack> 
-              <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+            <br></br><br></br> <br></br> <br></br> <br></br> <br></br>
         </Box>
     </div>
   )
 }
+
+
+
+  
