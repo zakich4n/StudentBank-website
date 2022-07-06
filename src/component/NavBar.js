@@ -3,13 +3,14 @@ import {
     Box,
     Flex,
     Image,
-
     Spacer,
     Link,
     Stack,
     useColorModeValue
 } from '@chakra-ui/react';
-
+import {
+    Link as LinkScroll
+} from 'react-scroll';
 
 
 import ColorModeSwitcher from './ColorModeSwitcher';
@@ -17,18 +18,6 @@ import LanguageSwitcher from './LanguageSwitcher'
 
 
 const Navigation=[
-    {
-        name : "Banque",
-        link : "/banque"
-    },
-    {
-        name : "Logement",
-        link : "/logement"
-    },
-    {
-        name : "Mobilité",
-        link : "/mobilite"
-    },
     {
         name : "Notre mission",
         link : "/mission"
@@ -42,6 +31,23 @@ const Navigation=[
         link : "/contact"
     }]
 
+    const Scroll=[
+        {
+            name : "Banque",
+            link : "banque",
+            isScroll : true
+        },
+        {
+            name : "Logement",
+            link : "logement",
+            isScroll : true
+        },
+        {
+            name : "Mobilité",
+            link : "mobilite",
+            isScroll : true
+        }]
+    
 export default function NavBar(props) {
 
     const background_color=useColorModeValue('white','rgba(53, 53, 53, 1)');
@@ -71,8 +77,13 @@ export default function NavBar(props) {
             <Flex alignItems={'center'}>
                 <Stack direction={'row'}>
                     <nav>
+                        {Scroll.map((item, index) => (
+                            <LinkScroll activeClass="active" style={{ "padding-left" : "40px" }} key={index} to={item.link} spy={true} smooth={true}>
+                                {item.name}
+                            </LinkScroll>
+                        ))}
                         {Navigation.map((item, index) => (
-                            <Link as={ReachLink} pl={12} key={index} to={item.link}>
+                            <Link as={ReachLink} pl="40px" key={index} to={item.link}>
                                {item.name}
                             </Link>
                         ))}

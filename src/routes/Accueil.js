@@ -1,9 +1,33 @@
+import {useEffect, useState} from 'react';
 import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text} from "@chakra-ui/react";
+import { AiOutlineToTop } from 'react-icons/ai'
+import {
+    Link as LinkScroll
+} from 'react-scroll';
 
 export default function Accueil() {
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
+
+    const [visible, setVisible] = useState(false)
+  
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 300){
+        setVisible(true)
+        } 
+        else if (scrolled <= 300){
+        setVisible(false)
+        }
+    };
+
+    window.addEventListener('scroll', toggleVisible);
+
     return (
         <Box bgGradient='linear(to-r, #FBCBC2, #FCD9BC)' w='100%'>
                 <VStack>
+                    <div id='accueil'> {/* Utilisation de div pour react-scroll */}
                     <Box> {/* Page d'acueille */}
                         <Center>
                             <VStack>
@@ -17,19 +41,19 @@ export default function Accueil() {
                         <Box>
                             <Grid templateColumns='repeat(3, 1fr)' gap={6} mt={200} >
                                 <GridItem  >
-                                    {Card("Banque","Lorem ipsum dolor sit amet", "red")}
+                                    {Card("Banque","Lorem ipsum dolor sit amet", "red", "banque")}
                                 </GridItem>
                                 <GridItem >
-                                    {Card("Logement","Lorem ipsum dolor sit amet", "red")}
+                                    {Card("Logement","Lorem ipsum dolor sit amet", "red", "logement")}
                                 </GridItem>
                                 <GridItem  >
-                                    {Card("Mobilité","Lorem ipsum dolor sit amet", "red")}
+                                    {Card("Mobilité","Lorem ipsum dolor sit amet", "red", "mobilite")}
                                 </GridItem>
                             </Grid>
                         </Box>
                     </Box>
-
-                    <Box h='870px' w='100%' bg='dark'> {/* Video de presentation */}
+                    </div>
+                    <Box h='870px' w='100%' bg='dark' > {/* Video de presentation */}
                         
                             <iframe
                                 width='100%'
@@ -40,8 +64,8 @@ export default function Accueil() {
                             />
                         
                     </Box>
-
-                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Gérer vos dépsnes */}
+                    <div id='banque'>
+                    <Box w='100%' h='863px' p={10} > {/* Gérer vos dépsnes */}
                          <Grid
                             h='863px'
                             templateRows='repeat(5, 1fr)'
@@ -74,8 +98,9 @@ export default function Accueil() {
                             </GridItem>
                         </Grid>
                     </Box>
+                    </div>
 
-                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Votre carte bancaire */}
+                    <Box w='100%' h='863px' p={10}> {/* Votre carte bancaire */}
                          <Grid
                             h='863px'
                             templateAreas={`"header header header header"
@@ -109,7 +134,8 @@ export default function Accueil() {
                         </Grid>
                     </Box>
 
-                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Vos avantages */}
+
+                    <Box w='100%' h='863px' p={10}> {/* Vos avantages */}
                          <Grid
                             h='863px'
                             templateRows='repeat(5, 1fr)'
@@ -143,7 +169,8 @@ export default function Accueil() {
                         </Grid>
                     </Box>
 
-                    <Box w='100%' h='863px' pl={10} pr={10}> {/* Aide à la lacoation */}
+                    <div id='logement' >
+                    <Box w='100%' h='863px' p={10} > {/* Aide à la lacoation */}
                          <Grid
                             h='863px'
                             templateAreas={`"header header header header"
@@ -176,8 +203,9 @@ export default function Accueil() {
                             </GridItem>
                         </Grid>
                     </Box>
-
-                    <Box w='100%' h='863px' pl={10} pr={10}> {/* International */}
+                    </div>
+                    <div id='mobilite'>
+                    <Box w='100%' h='863px' p={10} > {/* International */}
                          <Grid
                             h='863px'
                             templateRows='repeat(5, 1fr)'
@@ -210,23 +238,43 @@ export default function Accueil() {
                             </GridItem>
                         </Grid>
                     </Box>
+                    </div>
                 </VStack>
+
+                <Button
+                    onClick={() => {
+                    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                    }}
+                    style={{
+                    position: 'fixed',
+                    bottom: '40px',
+                    right: '40px',
+                    textAlign: 'center',
+                    display: visible ? 'inline' : 'none'
+                    }}
+                    leftIcon={<AiOutlineToTop/>}
+                >
+                    Haut de page
+                </Button>
 
         </Box>
     )
 }
 
-function Card(header, description, photo) {
+function Card(header, description, photo, link) {
     return(
-        <Box pos='relative' w='470px' h='665px' bg={photo}  borderRadius="10">
-            <Box pos='absolute' top='25px' left="35px" >
-                <Heading as='h2' >
-                    {header}
-                </Heading>
-                <Text >
-                    {description}
-                </Text>
+
+        <LinkScroll activeClass="active"  to={link} spy={true} smooth={true}>
+            <Box pos='relative' w='470px' h='665px' bg={photo}  borderRadius="10">
+                <Box pos='absolute' top='25px' left="35px" >
+                    <Heading as='h2' >
+                        {header}
+                    </Heading>
+                    <Text >
+                        {description}
+                    </Text>
+                </Box>
             </Box>
-        </Box>
+        </LinkScroll>
     )
 }
