@@ -78,7 +78,7 @@ export default function NavBar(props) {
                 <Stack direction={'row'}>
                     <nav>
                         {Scroll.map((item, index) => (
-                            <LinkScroll activeClass="active" style={{ "padding-left" : "40px" }} key={index} to={item.link} spy={true} smooth={true}>
+                            <LinkScroll activeClass="active" style={{ "paddingLeft" : "40px" }} key={index} to={item.link} spy={true} smooth={true}>
                                 {item.name}
                             </LinkScroll>
                         ))}
