@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text} from "@chakra-ui/react";
+import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text, Image} from "@chakra-ui/react";
 import { AiOutlineToTop } from 'react-icons/ai'
 import {
     Link as LinkScroll
@@ -25,34 +25,40 @@ export default function Accueil() {
     window.addEventListener('scroll', toggleVisible);
 
     return (
-        <Box bgGradient='linear(to-r, #FBCBC2, #FCD9BC)' w='100%'>
+        <Box bgGradient='linear(to-r, #F6AEA0, #FCD9BC)' w='100%'>
+            <Image src='Vector 36.png' pos='absolute' top='130' w='100%' />
+            <Image src='Vector 37.png' pos='absolute' top='240' w='100%' />
                 <VStack>
                     <div id='accueil'> {/* Utilisation de div pour react-scroll */}
                     <Box> {/* Page d'acueille */}
                         <Center>
                             <VStack>
-                                <Heading as='h1' size='2xl' mt={40} mb={10}>
-                                    Une banque pour les étudiants
+                                <Heading as='h1' size='3xl' mt={40} pb={5} color='white' zIndex='2'>
+                                    Une banque pour les
                                 </Heading>
-                                <Button>Être accompagné</Button>
+                                <Heading as='h1' size='3xl' pb={20} color='white'>
+                                    étudiants
+                                </Heading>
+                                {ButtonSB("Être accompagné")}
                             </VStack>
                         </Center>
 
                         <Box>
                             <Grid templateColumns='repeat(3, 1fr)' gap={6} mt={200} >
                                 <GridItem  >
-                                    {Card("Banque","Lorem ipsum dolor sit amet", "red", "banque")}
+                                    {Card("Banque","Lorem ipsum dolor sit amet", "image banque.png", "banque")}
                                 </GridItem>
                                 <GridItem >
-                                    {Card("Logement","Lorem ipsum dolor sit amet", "red", "logement")}
+                                    {Card("Logement","Lorem ipsum dolor sit amet", "image logement.png", "logement")}
                                 </GridItem>
                                 <GridItem  >
-                                    {Card("Mobilité","Lorem ipsum dolor sit amet", "red", "mobilite")}
+                                    {Card("Mobilité","Lorem ipsum dolor sit amet", "mobilite image.png", "mobilite")}
                                 </GridItem>
                             </Grid>
                         </Box>
                     </Box>
                     </div>
+
                     <Box h='870px' w='100%' bg='dark' > {/* Video de presentation */}
                         
                             <iframe
@@ -64,6 +70,7 @@ export default function Accueil() {
                             />
                         
                     </Box>
+
                     <div id='banque'>
                     <Box w='100%' h='863px' p={10} > {/* Gérer vos dépsnes */}
                          <Grid
@@ -78,7 +85,7 @@ export default function Accueil() {
                                 </Center>
                             </GridItem>
                             <GridItem rowSpan={4} colSpan={3} >
-                                Telephone
+                                <Image pl={10 } src="iPhone 13 Mockup white 1.png" h='90%' />
                             </GridItem>
                             <GridItem rowSpan={1} colSpan={1}  pos='relative'>
                                 <Heading size='xl' bottom='10' pos='absolute'>
@@ -86,21 +93,23 @@ export default function Accueil() {
                                 </Heading>
                             </GridItem>
                             <GridItem rowSpan={2} colSpan={2} >
-                                <Text fontSize='xl'>
+                                <Text fontSize='xl' pb={10}>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
+                                </Text>
+                                <Text fontSize='xl'>
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
                             <GridItem rowSpan={1} colSpan={1}  pos='relative' justifyContent='center'>
-                                <Center bottom='10' pos='absolute'>
-                                    <Button>Ouvrir mon compte</Button>
+                                <Center bottom='40' left='20' pos='absolute'>
+                                    {ButtonSB("Ouvrir mon compte")}
                                 </Center>
                             </GridItem>
                         </Grid>
                     </Box>
                     </div>
 
-                    <Box w='100%' h='863px' p={10}> {/* Votre carte bancaire */}
+                    <Box w='100%' h='863px' p={10} pl={30} bg='white'> {/* Votre carte bancaire */}
                          <Grid
                             h='863px'
                             templateAreas={`"header header header header"
@@ -111,9 +120,10 @@ export default function Accueil() {
                             templateRows='repeat(4, 1fr)'
                             templateColumns='repeat(3, 1fr)'
                             gap={4}
+                            pl={10}
                             >
                             <GridItem  area={'header'}>
-                                <Center h='100%'>
+                                <Center>
                                     <Heading as='h2' size='2xl'>Votre carte bancaire</Heading>
                                 </Center>
                             </GridItem>
@@ -123,13 +133,18 @@ export default function Accueil() {
                                 </Heading>
                             </GridItem>
                             <GridItem  area={'descrip'}>
-                                <Text fontSize='xl'>
+                                <Text fontSize='xl' pb={10}>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
+                                </Text>
+                                <Text fontSize='xl'>
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
                             <GridItem rowSpan={4} colSpan={2}  area={'image'}>
-                                CB
+                                <Center>
+                                    <Image pl={25} src="whitecard_mockup 1.png" h='90%' w='80%'/>
+                                </Center>
+                                
                             </GridItem>
                         </Grid>
                     </Box>
@@ -158,12 +173,14 @@ export default function Accueil() {
                             <GridItem rowSpan={2} colSpan={2} >
                                 <Text fontSize='xl'>
                                     Hey chers Students ! Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
+                                </Text>
+                                <Text fontSize='xl'>
                                     Gérez votre argent depuis votre téléphone et effectuez des opérations mobiles ou paiements en ligne partout dans le monde. Studentbank c’est aussi la possibilité de souscrire à des prêts étudiants, des découverts bancaires et ceux sans service ou justificatifs de revenus ou de cautionnement.
                                 </Text>
                             </GridItem>
                             <GridItem rowSpan={1} colSpan={1}  pos='relative' justifyContent='center'>
-                                <Center bottom='10' pos='absolute'>
-                                    <Button>Voir mes avantages</Button>
+                            <Center bottom='40' left='20' pos='absolute'>
+                                    {ButtonSB("Voir mes avantages")}
                                 </Center>
                             </GridItem>
                         </Grid>
@@ -265,7 +282,8 @@ function Card(header, description, photo, link) {
     return(
 
         <LinkScroll activeClass="active"  to={link} spy={true} smooth={true}>
-            <Box pos='relative' w='470px' h='665px' bg={photo}  borderRadius="10">
+            <Box pos='relative' w='470px' h='665px' bg="red"  borderRadius="10">
+                <Image src={photo} />
                 <Box pos='absolute' top='25px' left="35px" >
                     <Heading as='h2' >
                         {header}
@@ -276,5 +294,17 @@ function Card(header, description, photo, link) {
                 </Box>
             </Box>
         </LinkScroll>
+    )
+}
+
+function ButtonSB(titre) {
+    return (
+        <Button
+        px='30px'
+        size='lg'
+        border='2px' borderColor='white'
+        color='white'
+        bgGradient='linear(to-r, #ED174C, #F58220)'
+        >{titre}</Button>
     )
 }
