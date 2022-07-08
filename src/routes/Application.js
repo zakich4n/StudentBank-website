@@ -2,32 +2,30 @@ import { Box, Stack } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import { VStack } from "@chakra-ui/react"
-import { extendTheme } from '@chakra-ui/react'
-import { SimpleGrid } from "@chakra-ui/react"
-
-
 
 const innerBoxStyles = {
     display: 'flex',
     justifyContent: 'center',
     bgPosition: 'center',
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
-    fontSize: '40px',
+    fontSize: '48px',
     p: '6%'
 }
 
 
-export default function Mobilite(){
+export default function Logement(){
   return (
-    <div align='center'>
+    <div align='center' >
         <Box display='block'
             alignItems='center'
             justifyContent='center'
-            bgImage = "url('BG_telecherger_light.png')" 
+            width='100%'
+            height='100vh'
+            bgImage = "url('BG_telecharger_dark.png')" 
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize='cover' pb='108px'>
+            bgSize='cover'>
             <VStack align="center"  alignSelf={"center"}>
                <Box sx= {innerBoxStyles} fontSize={['sm', 'md', 'lg', 'xl']}>
                     Télécharger l’application
@@ -44,8 +42,12 @@ export default function Mobilite(){
                     </Link>
                 </Box>
             </VStack> 
-              <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+            <br></br><br></br> <br></br> <br></br> <br></br> <br></br>
         </Box>
     </div>
   )
 }
+
+
+
+  
