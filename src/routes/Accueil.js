@@ -39,7 +39,7 @@ export default function Accueil() {
             Paragraph1 : "Choisissez une carte bancaire qui vous correspond, personnalisable à votre goût et vos envies. ",
             Paragraph2 : "Payez en ligne, en magasin ou dans vos sites favoris, sans frais et en toute sécurité. Nos cartes ENKI, MAYA, HORIZON et EXOTIC vous assurent dans tous vos voyages et la gratuité des frais de retrait à l’international.",
             ButtonText : null, 
-            Image_url :"whitecard_mockup 1.png"
+            Image_url :"Frame 1.jpg"
         },
         {  /* inversed=false, MainHeader, SmallHeader, Paragraph1, Paragraph2="", ButtonText, Image_url */
             inversed : false, 
@@ -57,7 +57,7 @@ export default function Accueil() {
             Paragraph1 : "Studentbank n’est pas qu’une carte bancaire pour étudiant, vos problématiques sont au cœur de nos priorités, nous vous accompagnons dans vos recherches, la location et la gestion de votre logement étudiant. ",
             Paragraph2 : "Vous pourriez souscrire à la caution, la garantie et l’assurance immobilière sur notre plateforme. Les étudiants étrangers et internationaux ! Réservez votre logement étudiant dans votre pays de destination avant votre départ. ",
             ButtonText : "Louer un bien", 
-            Image_url :"logement3d.png"
+            Image_url :"3dhousewhite.png"
         },
         {  /* inversed=false, MainHeader, SmallHeader, Paragraph1, Paragraph2="", ButtonText, Image_url */
             inversed : false, 
@@ -66,7 +66,7 @@ export default function Accueil() {
             Paragraph1 : "Studentbank n’est pas qu’une carte bancaire pour étudiant, vos problématiques sont au cœur de nos priorités, nous vous accompagnons dans vos recherches, la location et la gestion de votre logement étudiant. ",
             Paragraph2 : "Vous pourriez souscrire à la caution, la garantie et l’assurance immobilière sur notre plateforme. Les étudiants étrangers et internationaux ! Réservez votre logement étudiant dans votre pays de destination avant votre départ. ",
             ButtonText : "Partir à l'étranger", 
-            Image_url :"gifgif 1.png"
+            Image_url :"planet.png"
         }
     ];
 
@@ -74,11 +74,12 @@ export default function Accueil() {
 
     return (
         <Box bgGradient='linear(to-r, #F6AEA0, #FCD9BC)' w='100%'>
+            
             <Image src='Vector 36.png' pos='absolute' top='130' w='100%' />
             <Image src='Vector 37.png' pos='absolute' top='240' w='100%' />
                 <VStack>
-                    <div id='accueil'> {/* Utilisation de div pour react-scroll */}
-                    <Box> {/* Page d'acueille */}
+                <div id='accueil'> 
+                    <Box> 
                         <Center>
                             <VStack>
                                 <Heading as='h1' size='3xl' mt={40} pb={5} color='white' zIndex='2'>
@@ -92,7 +93,7 @@ export default function Accueil() {
                         </Center>
 
                         <Box>
-                            <Grid templateColumns='repeat(3, 1fr)' gap={6} mt={200} >
+                            <Grid templateColumns='repeat(3, 1fr)' gap={6} mt={200} mx={5}>
                                 <GridItem  >
                                     {Card("Banque","Lorem ipsum dolor sit amet", "image banque.png", "banque")}
                                 </GridItem>
@@ -108,12 +109,16 @@ export default function Accueil() {
                     </div>
 
                     <div id="banque">
-                        {Window(container[0])}
+
                     </div>
+                    {Window(container[0])}
                     {Window(container[1])}
                     {Window(container[2])}
                     {Window(container[3])}
                     {Window(container[4])}
+
+
+
 
                 </VStack>
                 <Button
@@ -140,8 +145,8 @@ function Card(header, description, photo, link) {
     return(
 
         <LinkScroll activeClass="active"  to={link} spy={true} smooth={true}>
-            <Box pos='relative' w='470px' h='665px' bg="red"  borderRadius="10">
-                <Image src={photo} />
+            <Box pos='relative'  bg="red"  borderRadius="10">
+                <Image src={photo} h={600}/>
                 <Box pos='absolute' top='25px' left="35px" >
                     <Heading as='h2' >
                         {header}
@@ -159,40 +164,46 @@ function Window(item) {
     const inversed=item.inversed, MainHeader=item.MainHeader, SmallHeader=item.SmallHeader, Paragraph1=item.Paragraph1, Paragraph2=item.Paragraph2, ButtonText=item.ButtonText, Image_url=item.Image_url
     if(inversed) {
         return(
-            <Box  w='100%' bg='white' >
+            <Box bg='white' w='100%' >
                 <Grid
+                w='100%'
                 templateRows='repeat(2, 1fr)'
-                templateColumns='repeat(3, 1fr)'
+                templateColumns='repeat(2, 1fr)'
                 gridTemplateRows={'100px 1fr'}
+                gridTemplateColumns={'500px 1fr'}
                 gap={4}
-                p={20}
                 >
-                    <GridItem colSpan={3}  >
-                        <Center h='100%'>
-                            <Heading as='h2' size='2xl'>{MainHeader}</Heading>
+                    <GridItem colSpan={2}  >
+                        <Center h='100%' pos='relative' >
+                            <Heading as='h2' size='2xl' pos='absolute' bottom={-10}>{MainHeader}</Heading>
                         </Center>
                     </GridItem>
-                    <GridItem colSpan={1} rowSpan={2}   mt={10}  >
-                    <VStack textAlign='start' >
-                            <Heading size='xl' pb={8} w="100%">
-                                {SmallHeader}
-                            </Heading>
-
-                            <Text fontSize='xl'>
-                                {Paragraph1}
-                            </Text>
-                            <Text fontSize='xl'>
-                                {Paragraph2}
-                            </Text>
-
-                            <Center pt={10}>
-                                {ButtonSB(ButtonText)}
-                            </Center>
+                    <GridItem colSpan={1} rowSpan={1}  pos='relative' >
+                        <VStack 
+                        textAlign='start' 
+                        pos='absolute' 
+                        top='50%' 
+                        transform='translateY(-50%)'
+                        left='20%'
+                        right='-20%'
+                        >
+                                <Heading size='xl' pb={8} w="100%">
+                                    {SmallHeader}
+                                </Heading>
+                                <Text fontSize='xl' pb={4}>
+                                    {Paragraph1}
+                                </Text>
+                                <Text fontSize='xl'>
+                                    {Paragraph2}
+                                </Text>
+                                <Center pt={10}>
+                                    {ButtonSB(ButtonText)}
+                                </Center>
                         </VStack>
                     </GridItem>
-                    <GridItem rowSpan={2} colSpan={2}   >
+                    <GridItem rowSpan={1} colSpan={1}  >
                         <Box  overflow='hidden' w='100%' >
-                            <Image pl={25} src={Image_url} />
+                            <Image src={Image_url} />
                         </Box>
                     </GridItem>
                 </Grid>
@@ -201,40 +212,47 @@ function Window(item) {
     }
     else {
         return(
-            <Box  w='100%' >
+            <Box   >
                 <Grid
+                w='100%'
                 templateRows='repeat(2, 1fr)'
-                templateColumns='repeat(3, 1fr)'
+                templateColumns='repeat(2, 1fr)'
                 gridTemplateRows={'100px 1fr'}
-                row-gap={0}
+                gridTemplateColumns={'1fr 500px'}
                 gap={4}
-                p={20}
                 >
-                    <GridItem colSpan={3}  >
-                        <Center h='100%'>
-                            <Heading as='h2' size='2xl'>{MainHeader}</Heading>
+                    <GridItem colSpan={2}  >
+                        <Center h='100%' pos='relative' >
+                            <Heading as='h2' size='2xl' pos='absolute' bottom={-10}>{MainHeader}</Heading>
                         </Center>
                     </GridItem>
-                    <GridItem rowSpan={2} colSpan={2} overflow='hidden'  >
+                    <GridItem rowSpan={1} colSpan={1}  >
                         <Box  overflow='hidden' w='100%' >
-                            <Image pl={25} src={Image_url} />
+                            <Image src={Image_url} />
                         </Box>
                     </GridItem>
-                    <GridItem colSpan={1} rowSpan={2}  mt={10} >
-                    <VStack textAlign='start' >
-                            <Heading size='xl' pb={8} w="100%">
-                                {SmallHeader}
-                            </Heading>
-                            <Text fontSize='xl' pb={4}>
-                                {Paragraph1}
-                            </Text>
-                            <Text fontSize='xl'>
-                                {Paragraph2}
-                            </Text>
-                            <Center pt={10}>
-                                {ButtonSB(ButtonText)}
-                            </Center>
-                        </VStack>
+                    <GridItem colSpan={1} rowSpan={1}  pos='relative' >
+                        <VStack 
+                        textAlign='start' 
+                        pos='absolute' 
+                        top='50%' 
+                        transform='translateY(-50%)'
+                        left='-20%'
+                        right='20%'
+                        >
+                                <Heading size='xl' pb={8} w="100%">
+                                    {SmallHeader}
+                                </Heading>
+                                <Text fontSize='xl' pb={4}>
+                                    {Paragraph1}
+                                </Text>
+                                <Text fontSize='xl'>
+                                    {Paragraph2}
+                                </Text>
+                                <Center pt={10}>
+                                    {ButtonSB(ButtonText)}
+                                </Center>
+                            </VStack>
                     </GridItem>
                 </Grid>
             </Box>
