@@ -2,21 +2,6 @@ import { Box, Stack } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import { VStack } from "@chakra-ui/react"
-import { extendTheme } from '@chakra-ui/react'
-import { SimpleGrid } from "@chakra-ui/react"
-
-
-const breakpoints = {
-  sm: '320px',
-  md: '768px',
-  lg: '960px',
-  xl: '1200px',
-  '2xl': '1536px',
-}
-
-// 3. Extend the theme
-const theme = extendTheme({ breakpoints })
-
 
 const innerBoxStyles = {
     display: 'flex',
@@ -29,15 +14,15 @@ const innerBoxStyles = {
 }
 
 
-export default function Application(){
+export default function Logement(){
   return (
-    <div align='center'>
+    <div align='center' >
         <Box display='block'
             alignItems='center'
             justifyContent='center'
             width='100%'
             height='100vh'
-            bgImage = "url('logo.png')" 
+            bgImage = "url('BG_telecharger_dark.png')" 
             bgPosition="center" 
             bgRepeat="no-repeat"
             bgSize='cover'>

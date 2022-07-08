@@ -1,9 +1,8 @@
 import { Box} from '@chakra-ui/react'
 import { VStack, Stack, HStack   } from "@chakra-ui/react"
 import { extendTheme } from '@chakra-ui/react'
-import { FormControl, Input, Button, useColorModeValue, Select } from '@chakra-ui/react';
-import { Link } from '@chakra-ui/react'
-import { Image } from '@chakra-ui/react'
+import { FormControl, Input, Button, useColorModeValue, Select,Link } from '@chakra-ui/react';
+import { Avatar, AvatarBadge } from "@chakra-ui/react"
 
 
 const breakpoints = {
@@ -12,6 +11,13 @@ const breakpoints = {
   lg: '960px',
   xl: '1200px',
   '2xl': '1536px',
+}
+
+const buttonStyles =  {
+    borderTopColor:' black',
+    borderRightColor: 'black',
+    borderBottomColor: '#ED174C',
+    borderLeftColor:'#ED174C',
 }
 
 // 3. Extend the theme
@@ -36,22 +42,26 @@ export default function Logement(){
             alignItems='center'
             justifyContent='center'
             width='100%'
-            height='100vh'
             bgImage = "url('BG_location.png')" 
             bgPosition="center" 
             bgRepeat="no-repeat"
             bgSize='cover'>
             <VStack spacing={3} align="center" p={'10'} >
-            <Box borderRadius={'2px'} width={'40%'}
-                    border={'2px'}
-                    borderColor={'white'}>
-                <Link href='' >
-                    <Button width={'50%'} bg="#ED174C"  color={'white'} borderRadius={10}>Location</Button>
+            <div style={{borderWidth:'3px' ,borderColor:'white',width:'30%', height:'100%',borderRadius:'5%'}}>
+              <div style={{  height:'100%', borderRadius:'5%',borderTopColor:' black', borderRightColor: 'black', borderBottomColor: '#ED174C',borderLeftColor:'#ED174C', borderWidth:'10px' }} width={'40%'}  _hover={{ bg: '#11ffee00'}}>
+               
+              </div>
+              <div style={{  height:'100%', borderRadius:'5%',borderTopColor:' black', borderRightColor: 'black', borderBottomColor: '#ED174C',borderLeftColor:'#ED174C', borderWidth:'10px' }} width={'40%'}  _hover={{ bg: '#11ffee00'}}>
+               
+              </div>
+               {/* <Link href=''>
+                    <Button  _hover={{ transform: 'translateY(-2px)'}} width={'50%'} bg="#ED174C"  color={'white'}>Location</Button>
                 </Link>
                 <Link href=''>
-                    <Button width={'50%'}  bg="black" color={'white'} >Nous contacter</Button>
-                </Link>
-            </Box><br></br>
+                    <Button _hover={{ transform: 'translateY(-2px)'}}   width={'50%'}  bg="#090A0A00" color={'white'} >Nous contacter</Button>
+                </Link> */}
+            </div>
+            <br></br>
             <Box
               rounded={'lg'}
               boxShadow={'lg'}>
@@ -76,6 +86,7 @@ export default function Logement(){
                 </FormControl>
                 <Button
                     m={100}
+                    borderRadius="12"
                     width={'70%'}
                     border={'2px'}
                     borderColor={'#ED174C'}
@@ -85,10 +96,15 @@ export default function Logement(){
                       bg: '#ED174C',
                     }}>
                    Se faire contacter
-                </Button><br></br>
+                </Button>
+                <Avatar size="lg" left="680"  top="-5"  src ="robot.png" bg='blackAlpha.100'> 
+                  <AvatarBadge top="-2px"  boxSize="0.95em" bg="green.500"/>
+                </Avatar><br></br>
+                <br></br><br></br>
               </Stack>
             </Box>
-          </VStack>
+           <br></br>
+          </VStack> 
         </Box>
     </div>
   )

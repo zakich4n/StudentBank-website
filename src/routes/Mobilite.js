@@ -13,7 +13,7 @@ const innerBoxStyles = {
     bgPosition: 'center',
     color: 'black',
     fontWeight: 'bold',
-    fontSize: '48px',
+    fontSize: '40px',
     p: '6%'
 }
 
@@ -24,10 +24,10 @@ export default function Mobilite(){
         <Box display='block'
             alignItems='center'
             justifyContent='center'
-            bgImage = "url('logo_light.png')" 
+            bgImage = "url('BG_telecherger_light.png')" 
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize='cover'>
+            bgSize='cover' pb='108px'>
             <VStack align="center"  alignSelf={"center"}>
                <Box sx= {innerBoxStyles} fontSize={['sm', 'md', 'lg', 'xl']}>
                     Télécharger l’application
