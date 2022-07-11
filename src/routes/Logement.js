@@ -49,7 +49,7 @@ export default function Logement(){
                   <Input sx ={formStyle} type="phone" placeholder="Numéro de téléphone*" isRequired />
                 </FormControl>
                  <FormControl id="motif">
-                <Select sx ={formStyle} placeholder="Ville*" borderColor='black' />
+                <Select sx ={formStyle} placeholder="Ville*" borderColor='black' color={useColorModeValue('#737373','#737373')} />
                 </FormControl>
                 <FormControl id="secteur">  
                 <Input sx ={formStyle} type="text"  placeholder="Secteur du bien*" isRequired/>

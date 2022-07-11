@@ -6,17 +6,19 @@ import { Text } from "@chakra-ui/react"
 
 
 
-const innerBoxStyles = {
+export default function Contact(){
+ 
+  const innerBoxStyles = {
     display: 'center',
     justifyContent: 'center',
     bgPosition: 'center',
-    color: 'white',
+    color: useColorModeValue('black', 'white'),
     fontWeight: '600',
     fontSize: '38px',
 }
 
 
-export default function Contact(){
+  //style pour le formuliare
   const formStyle = {
     border:'2px',
     borderColor: useColorModeValue('black', 'white'),
@@ -26,17 +28,18 @@ export default function Contact(){
   }
 
   return (
-    <div height={'100%'} style={{backgroundColor :'#231F20'}} >
+    <div height={'100%'} >
         <Box 
+            bg={useColorModeValue('white','#231F20')}
             display='block'
             alignItems='center'
             justifyContent='center'
             align='center'
             width='100%'
-            bgImage = "url('BG_contact_dark.png')" 
+            bgImage = {useColorModeValue("url('BG_contact_light.png')", "url('BG_contact_dark.png')")}
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize='cover'>    
+            bgSize={useColorModeValue('cover', 'contain')}>    
           <VStack spacing={3} align="center">
             <Box mt="40px">
               <Stack align={'match-parent'} spacing={4} width={"100%"}>
@@ -44,7 +47,7 @@ export default function Contact(){
                 <HStack  alignSelf = {'center'}>
                   <Box mt="40px">
                     <FormControl bg={useColorModeValue('white')} id="picker">
-                      <Input sx = {formStyle} color='white' fontSize={'xl'} width={50} type="date" />
+                      <Input color={useColorModeValue('#737373','#737373')} sx = {formStyle}fontSize={'xl'} width={50} type="date" />
                     </FormControl>
                   </Box>
                   <Box>
@@ -54,7 +57,7 @@ export default function Contact(){
                   </Box>
                 </HStack>
                 <FormControl id="motif">
-                  <Select sx = {formStyle} placeholder="Motif du rendez-vous"  bg={useColorModeValue('white')} />
+                  <Select sx = {formStyle} placeholder="Motif du rendez-vous"  bg={useColorModeValue('white')} color={useColorModeValue('#737373','#737373')} />
                 </FormControl>
                   <FormControl id="nom">
                   <Input sx = {formStyle} type="text"  placeholder="Nom*"  bg={useColorModeValue('white')} isRequired/>
@@ -68,11 +71,11 @@ export default function Contact(){
                 <FormControl id="telephone">
                   <Input  sx = {formStyle}type="phone" placeholder="Numéro de téléphone*"  bg={useColorModeValue('white')} isRequired />
                 </FormControl>
-                <Radio  color="#ffffff"><Text color='white'>Lorem ipsum</Text></Radio>
+                <Radio><Text color={useColorModeValue('black', 'white')}>Lorem ipsum</Text></Radio>
                 <Button
                    border='2px'
                   borderRadius="10"
-                  borderColor={useColorModeValue('white', '#ED174C')}
+                  borderColor={useColorModeValue( '#ED174C', 'white')}
                   boxShadow='2xl'  
                   width={'70%'}
                   bgGradient={useColorModeValue('linear(to-l, #FFFFFF, #FFFFFF)', 'linear(to-l, #ED174C, #F58220)')}

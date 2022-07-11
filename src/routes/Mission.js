@@ -8,7 +8,8 @@ import { useColorModeValue } from "@chakra-ui/react"
 export default function Equipe(){
   return (
     <div style={{backgroundColor :'white'}} >
-        <Box display='block'
+        <Box 
+            display='block'
             alignItems='center'
             justifyContent='center'
             width='100%'
@@ -16,9 +17,8 @@ export default function Equipe(){
             bgImage ={useColorModeValue("url('BG_mission_light.png')", "url('BG_waves_mission.png')" )}
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize={useColorModeValue('contain', 'cover')}        >
-            <Box p={5}></Box>
-            <SimpleGrid marginX={20} columns={2} rows={2} spacingY={50} spacingX={100} >
+            bgSize='cover'>
+            <SimpleGrid marginX={20} marginY={20} columns={2} rows={2} spacingY={50} spacingX={100} >
                 <Box bg="#11ffee00" height="200px" maxW={'530px'} rounded={'md'} overflow={'hidden'}>
                     <Text  color={useColorModeValue('black', 'white')}  fontSize='30px' >  Comment?</Text>
                     <Text  color={useColorModeValue('black', 'white')}  fontSize='15px' >Le lorem ipsum est, en imprimerie, une suite de mots sans signification 
