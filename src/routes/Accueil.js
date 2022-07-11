@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text, Image} from "@chakra-ui/react";
+import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text, Image, useColorModeValue} from "@chakra-ui/react";
 import { AiOutlineToTop } from 'react-icons/ai'
 import {
     Link as LinkScroll
@@ -21,6 +21,20 @@ export default function Accueil() {
         setVisible(false)
         }
     };
+
+    const colorTheme = useColorModeValue({ //light mode 
+        bg : 'linear(to-r, #F6AEA0, #FCD9BC)',
+        button : {
+            bgGrad :  'linear(to-r, #ED174C, #F58220)',
+            borderColor : 'white'
+        }
+    },{ //dark mode
+        bg : "231F20",
+        button : {
+            bgGrad :  'null',
+            borderColor :  '#ED174C',
+        }
+    })
 
     const container = [
         {  /* inversed=false, MainHeader, SmallHeader, Paragraph1, Paragraph2="", ButtonText, Image_url */
@@ -73,7 +87,7 @@ export default function Accueil() {
     window.addEventListener('scroll', toggleVisible);
 
     return (
-        <Box bgGradient='linear(to-r, #F6AEA0, #FCD9BC)' w='100%'>
+        <Box bgGradient={colorTheme.bg} w='100%'>
             
             <Image src='Vector 36.png' pos='absolute' top='130' w='100%' />
             <Image src='Vector 37.png' pos='absolute' top='240' w='100%' />
@@ -107,6 +121,19 @@ export default function Accueil() {
                         </Box>
                     </Box>
                     </div>
+
+
+                    <Box h='870px' w='100%' bg='white'> {/* Video de presentation */}
+                        
+                        <iframe
+                            width='100%'
+                            height='100%'
+                            title='naruto'
+                            src='https://www.youtube.com/embed/QhBnZ6NPOY0'
+                            allowFullScreen
+                        />
+                                                    
+                     </Box>
 
                     <div id="banque">
 
@@ -164,7 +191,7 @@ function Window(item) {
     const inversed=item.inversed, MainHeader=item.MainHeader, SmallHeader=item.SmallHeader, Paragraph1=item.Paragraph1, Paragraph2=item.Paragraph2, ButtonText=item.ButtonText, Image_url=item.Image_url
     if(inversed) {
         return(
-            <Box bg='white' w='100%' >
+            <Box  w='100%' >
                 <Grid
                 w='100%'
                 templateRows='repeat(2, 1fr)'
