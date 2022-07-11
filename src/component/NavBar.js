@@ -83,7 +83,7 @@ export default function NavBar(props) {
                             </LinkScroll>
                         ))}
                         {Navigation.map((item, index) => (
-                            <Link as={ReachLink} pl="40px" key={index} to={item.link}>
+                            <Link as={ReachLink} pl={'40px'} key={index} to={item.link}>
                                {item.name}
                             </Link>
                         ))}
