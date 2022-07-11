@@ -5,6 +5,7 @@ import { Avatar, AvatarBadge } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
 
 
+
 const innerBoxStyles = {
     display: 'center',
     justifyContent: 'center',
@@ -16,6 +17,14 @@ const innerBoxStyles = {
 
 
 export default function Contact(){
+  const formStyle = {
+    border:'2px',
+    borderColor: useColorModeValue('black', 'white'),
+    borderRadius: "8",
+    bg: useColorModeValue('#11ffee00','white'),
+    _placeholder: { color:useColorModeValue('#737373', '#737373')}
+  }
+
   return (
     <div height={'100%'} style={{backgroundColor :'#231F20'}} >
         <Box 
@@ -35,40 +44,40 @@ export default function Contact(){
                 <HStack  alignSelf = {'center'}>
                   <Box mt="40px">
                     <FormControl bg={useColorModeValue('white')} id="picker">
-                      <Input color='white' fontSize={'xl'} width={50} type="date" />
+                      <Input sx = {formStyle} color='white' fontSize={'xl'} width={50} type="date" />
                     </FormControl>
                   </Box>
                   <Box>
                     <FormControl id="date">
-                      <Input mt="40px" type="DatePicker" placeholder="Date du rendez-vous"  bg={useColorModeValue('white')} pointerEvents={'none'} isRequired />
+                      <Input sx = {formStyle} mt="40px" type="DatePicker" placeholder="Date du rendez-vous"  bg={useColorModeValue('white')} pointerEvents={'none'} isRequired />
                     </FormControl>
                   </Box>
                 </HStack>
                 <FormControl id="motif">
-                  <Select placeholder="Motif du rendez-vous"  bg={useColorModeValue('white')} />
+                  <Select sx = {formStyle} placeholder="Motif du rendez-vous"  bg={useColorModeValue('white')} />
                 </FormControl>
                   <FormControl id="nom">
-                  <Input type="text"  placeholder="Nom*"  bg={useColorModeValue('white')} isRequired/>
+                  <Input sx = {formStyle} type="text"  placeholder="Nom*"  bg={useColorModeValue('white')} isRequired/>
                 </FormControl>
                 <FormControl id="prenom">
-                  <Input type="text"  placeholder="Prénom*"  bg={useColorModeValue('white')} isRequired/>
+                  <Input sx = {formStyle} type="text"  placeholder="Prénom*"  bg={useColorModeValue('white')} isRequired/>
                 </FormControl>
                 <FormControl id="email">
-                  <Input type="email"  placeholder="Adresse mail*"  bg={useColorModeValue('white')} isRequired/>
+                  <Input sx = {formStyle} type="email"  placeholder="Adresse mail*"  bg={useColorModeValue('white')} isRequired/>
                 </FormControl>
                 <FormControl id="telephone">
-                  <Input type="phone" placeholder="Numéro de téléphone*"  bg={useColorModeValue('white')} isRequired />
+                  <Input  sx = {formStyle}type="phone" placeholder="Numéro de téléphone*"  bg={useColorModeValue('white')} isRequired />
                 </FormControl>
                 <Radio  color="#ffffff"><Text color='white'>Lorem ipsum</Text></Radio>
                 <Button
-                    m={100}
-                    width={'50%'}
-                    bg={'#ED174C'}
-                    color={'white'}
-                    alignSelf = {'center'}
-                    _hover={{
-                      bg: '#ED174C',
-                    }}>
+                   border='2px'
+                  borderRadius="10"
+                  borderColor={useColorModeValue('white', '#ED174C')}
+                  boxShadow='2xl'  
+                  width={'70%'}
+                  bgGradient={useColorModeValue('linear(to-l, #FFFFFF, #FFFFFF)', 'linear(to-l, #ED174C, #F58220)')}
+                  color={useColorModeValue('black', 'white')}
+                  alignSelf = {'center'}>
                     Valider le rendez vous
                 </Button>
                 <Avatar  size="lg" left="680" src ="robot.png" bg='blackAlpha.100'> 

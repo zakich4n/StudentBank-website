@@ -1,109 +1,78 @@
-import { Box} from '@chakra-ui/react'
-import { VStack, Stack, HStack   } from "@chakra-ui/react"
+import { Box, VStack, Stack} from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
-import { FormControl, Input, Button, useColorModeValue, Select,Link } from '@chakra-ui/react';
-import { Avatar, AvatarBadge } from "@chakra-ui/react"
-
-
-const breakpoints = {
-  sm: '320px',
-  md: '768px',
-  lg: '960px',
-  xl: '1200px',
-  '2xl': '1536px',
-}
-
-const buttonStyles =  {
-    borderTopColor:' black',
-    borderRightColor: 'black',
-    borderBottomColor: '#ED174C',
-    borderLeftColor:'#ED174C',
-}
-
-// 3. Extend the theme
-const theme = extendTheme({ breakpoints })
-
-
-const innerBoxStyles = {
-    display: 'flex',
-    justifyContent: 'center',
-    bgPosition: 'center',
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: '48px',
-    p: '6%'
-}
-
+import { FormControl, Input, Button, Select,SimpleGrid, Link, Avatar, AvatarBadge } from '@chakra-ui/react';
+import { useColorModeValue } from "@chakra-ui/react"
 
 export default function Logement(){
+  const formStyle = {
+    border:'2px',
+    borderColor: useColorModeValue('black', 'white'),
+    borderRadius: "8",
+    bg: useColorModeValue('#11ffee00','white'),
+    _placeholder: { color:useColorModeValue('#737373', '#737373')}
+  }
+
   return (
-    <div  height={'100%'} style={{backgroundColor :'#231F20'}} >
+    <div  height={'40%'} style={{backgroundColor :'white'}} >
         <Box display='block'
             alignItems='center'
             justifyContent='center'
             width='100%'
-            bgImage = "url('BG_location.png')" 
+            bgImage = {useColorModeValue("url('BG_logement_light.png')" , "url('BG_location.png')")}
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize='cover'>
+            bgSize={useColorModeValue('contain','cover')}> 
             <VStack spacing={3} align="center" p={'10'} >
-            <div style={{borderWidth:'3px' ,borderColor:'white',width:'30%', height:'100%',borderRadius:'5%'}}>
-              <div style={{  height:'100%', borderRadius:'5%',borderTopColor:' black', borderRightColor: 'black', borderBottomColor: '#ED174C',borderLeftColor:'#ED174C', borderWidth:'10px' }} width={'40%'}  _hover={{ bg: '#11ffee00'}}>
-               
-              </div>
-              <div style={{  height:'100%', borderRadius:'5%',borderTopColor:' black', borderRightColor: 'black', borderBottomColor: '#ED174C',borderLeftColor:'#ED174C', borderWidth:'10px' }} width={'40%'}  _hover={{ bg: '#11ffee00'}}>
-               
-              </div>
-               {/* <Link href=''>
-                    <Button  _hover={{ transform: 'translateY(-2px)'}} width={'50%'} bg="#ED174C"  color={'white'}>Location</Button>
-                </Link>
-                <Link href=''>
-                    <Button _hover={{ transform: 'translateY(-2px)'}}   width={'50%'}  bg="#090A0A00" color={'white'} >Nous contacter</Button>
-                </Link> */}
-            </div>
-            <br></br>
+              <SimpleGrid bgGradient={'linear(to-l, #ED174C, #F58220)'} border='5px' borderWidth={20} marginX={20} columns={2} rows={2} spacingY={50}>
+                <Box bgGradient={'linear(to-l, #ED174C, #F58220)'} height="40px" w={'200px'} >
+                  <Link href=''>
+                    <Button bgGradient={'linear(to-l, #ED174C, #F58220)'} width={'100%'} color={'black'}  variant='outline'>Location</Button>
+                  </Link>
+                </Box>
+                <Box bg="white" height="40px"  w={'200px'}>
+                  <Link href=''>
+                    <Button width={'100%'}  bg="white" color={'black'}  variant='outline'>Nous contacter</Button>
+                  </Link>
+                </Box>
+              </SimpleGrid>
+              <br></br>
             <Box
-              rounded={'lg'}
-              boxShadow={'lg'}>
-              <Stack align={'match-parent'} spacing={4} width={"100%"}>
+              rounded={'lg'}>
+              <Stack spacing={4} width={"100%"}>
                 <FormControl id="nom">
-                <Input type="text"  placeholder="Nom Prenom*"  bg={useColorModeValue('white')} isRequired/>
+                <Input sx ={formStyle} type="text"  placeholder="Nom Prenom*"  isRequired/>
                 </FormControl>
                 <FormControl id="email">
-                  <Input type="email"  placeholder="Adresse mail*"  bg={useColorModeValue('white')} isRequired/>
+                  <Input sx ={formStyle} type="email"  placeholder="Adresse mail*" isRequired/>
                 </FormControl>
                 <FormControl id="telephone">
-                  <Input type="phone" placeholder="Numéro de téléphone*"  bg={useColorModeValue('white')} isRequired />
+                  <Input sx ={formStyle} type="phone" placeholder="Numéro de téléphone*" isRequired />
                 </FormControl>
                  <FormControl id="motif">
-                <Select placeholder="Ville*"  bg={useColorModeValue('white')} />
+                <Select sx ={formStyle} placeholder="Ville*" borderColor='black' />
+                </FormControl>
+                <FormControl id="secteur">  
+                <Input sx ={formStyle} type="text"  placeholder="Secteur du bien*" isRequired/>
                 </FormControl>
                 <FormControl id="secteur">
-                <Input type="text"  placeholder="Secteur du bien*"  bg={useColorModeValue('white')} isRequired/>
-                </FormControl>
-                <FormControl id="secteur">
-                <Input type="file" border={'1px dashed'}   borderColor='white' placeholder="Ajouter une Photo"  bg='#11ffee00' isRequired/>
-                </FormControl>
+                <Input type="file" border={'1px dashed'}   borderColor={useColorModeValue('black','white')}  bg='#11ffee00' _placeholder = { {color: '#737373', value: "Ajouter une Photo" }} width={'60%'} right='-70px' isRequired/>
+                </FormControl><br></br>
                 <Button
-                    m={100}
-                    borderRadius="12"
-                    width={'70%'}
-                    border={'2px'}
-                    borderColor={'#ED174C'}
-                    color={'black'}
-                    alignSelf = {'center'}
-                    _hover={{
-                      bg: '#ED174C',
-                    }}>
+                  border='2px'
+                  borderRadius="10"
+                  borderColor={useColorModeValue('white', '#ED174C')}
+                  boxShadow='2xl'  
+                  width={'70%'}
+                  bgGradient={useColorModeValue('linear(to-l, #ED174C, #F58220)', 'linear(to-l, #FFFFFF, #FFFFFF)')}
+                  color={useColorModeValue('white', 'black')}
+                  alignSelf = {'center'}>
                    Se faire contacter
                 </Button>
-                <Avatar size="lg" left="680"  top="-5"  src ="robot.png" bg='blackAlpha.100'> 
+                <Avatar size="lg" left="680"  top="-5px"  src ="robot.png" bg='blackAlpha.100'> 
                   <AvatarBadge top="-2px"  boxSize="0.95em" bg="green.500"/>
-                </Avatar><br></br>
-                <br></br><br></br>
+                </Avatar><br></br> <br></br><br></br>
               </Stack>
-            </Box>
-           <br></br>
+            </Box>   
           </VStack> 
         </Box>
     </div>
