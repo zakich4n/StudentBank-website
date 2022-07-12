@@ -3,13 +3,14 @@ import {
     Box,
     Flex,
     Image,
-
     Spacer,
     Link,
     Stack,
     useColorModeValue
 } from '@chakra-ui/react';
-
+import {
+    Link as LinkScroll
+} from 'react-scroll';
 
 
 import ColorModeSwitcher from './ColorModeSwitcher';
@@ -17,18 +18,6 @@ import LanguageSwitcher from './LanguageSwitcher'
 
 
 const Navigation=[
-    {
-        name : "Banque",
-        link : "/banque"
-    },
-    {
-        name : "Logement",
-        link : "/logement"
-    },
-    {
-        name : "Mobilité",
-        link : "/mobilite"
-    },
     {
         name : "Notre mission",
         link : "/mission"
@@ -40,15 +29,37 @@ const Navigation=[
     {
         name : "Contact",
         link : "/contact"
-    }
-]
+    }]
 
-export default function NavBar() {
+    const Scroll=[
+        {
+            name : "Banque",
+            link : "banque",
+            isScroll : true
+        },
+        {
+            name : "Logement",
+            link : "logement",
+            isScroll : true
+        },
+        {
+            name : "Mobilité",
+            link : "mobilite",
+            isScroll : true
+        }]
+    
+export default function NavBar(props) {
+
     const background_color=useColorModeValue('white','rgba(53, 53, 53, 1)');
     const shadow=useColorModeValue('xl','dark-lg');
 
     return(
-    <Box  h={90}>
+    <Box  h={10} w='100%'
+    position='sticky'
+    top='0'
+    {...props}
+
+    >
         <Box 
             bg={background_color}
             px={10}
@@ -66,8 +77,13 @@ export default function NavBar() {
             <Flex alignItems={'center'}>
                 <Stack direction={'row'}>
                     <nav>
+                        {Scroll.map((item, index) => (
+                            <LinkScroll activeClass="active" style={{ "padding-left" : "40px" }} key={index} to={item.link} spy={true} smooth={true}>
+                                {item.name}
+                            </LinkScroll>
+                        ))}
                         {Navigation.map((item, index) => (
-                            <Link as={ReachLink} pl={12} key={index} to={item.link}>
+                            <Link as={ReachLink} pl="40px" key={index} to={item.link}>
                                {item.name}
                             </Link>
                         ))}
