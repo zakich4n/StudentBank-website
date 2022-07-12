@@ -23,7 +23,7 @@ const theme = extendTheme({ colors })
 function App() {
   return (
     <ChakraProvider>  
-      <NavBar/> 
+      <NavBar zIndex={5} /> 
       <Outlet/> 
       <Footer/>
     </ChakraProvider>
