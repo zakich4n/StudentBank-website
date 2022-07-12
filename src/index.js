@@ -6,7 +6,9 @@ import {
   Route
 } from "react-router-dom";
 
+
 import { ColorModeScript } from '@chakra-ui/react'
+
 
 import Mission from "./routes/Mission";
 import Equipe from "./routes/Equipe";
@@ -24,6 +26,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} >
         <Route exact path="/" element={<Accueil />} />
+
         <Route path="mission" element={<Mission />} />
         <Route path="equipe" element={<Equipe />} />
         <Route path="contact" element={<Contact />} />
