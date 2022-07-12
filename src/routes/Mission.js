@@ -17,7 +17,7 @@ export default function Equipe(){
             bgPosition="center" 
             bgRepeat="no-repeat"
             bgSize='cover'>
-            <SimpleGrid marginX={20} marginY={20} columns={2} rows={2} spacingY={50} spacingX={100} >
+            <SimpleGrid marginX={20} marginY={15} columns={2} rows={2} spacingY={50} spacingX={100} >
                 <Box bg="#11ffee00" height="200px" maxW={'530px'} rounded={'md'} overflow={'hidden'}>
                     <Text  color={useColorModeValue('black', 'white')}  fontSize='30px' >  Comment?</Text>
                     <Text  color={useColorModeValue('black', 'white')}  fontSize='15px' >Le lorem ipsum est, en imprimerie, une suite de mots sans signification 

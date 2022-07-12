@@ -18,11 +18,12 @@ export default function Logement(){
             alignItems='center'
             justifyContent='center'
             width='100%'
-            bgImage = {useColorModeValue("url('BG_logement_light.png')" , "url('BG_location.png')")}
+            bgImage = "url('BG_logement_light.png')"
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize={useColorModeValue('contain','cover')}> 
-            <VStack spacing={3} align="center" p={'10'} >
+            bgColor={useColorModeValue('white','black')}
+            bgSize='contain'> 
+            <VStack marginY={15} spacing={3} align="center" p={'10'} >
               <SimpleGrid bgGradient={'linear(to-l, #ED174C, #F58220)'} border='5px' borderWidth={20} marginX={20} columns={2} rows={2} spacingY={50}>
                 <Box bgGradient={'linear(to-l, #ED174C, #F58220)'} height="40px" w={'200px'} >
                   <Link href=''>
