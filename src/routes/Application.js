@@ -15,7 +15,7 @@ const innerBoxStyles = {
 }
 
 
-export default function Logement(){
+export default function Application(){
   return (
     <div align='center' >
     
