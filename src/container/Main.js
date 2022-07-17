@@ -9,21 +9,40 @@ import ButtonSB from '../component/ButtonSB'
 
 
 export default function Main(props) {
-    const [video, setVideo] = useControllableState({ video : null, playing : false })
 
-    const setBackgroundVideo = () => {
-        const box=document.getElementById("accueil");
-        console.log(box)
+    const setBackgroundVideo = (nb) => {
+        const box=document.getElementById("background-video"+nb);
+        box.style.display = null
     }
 
+    const resetBackgroundVideo = (nb) => {
+        const box=document.getElementById("background-video"+nb);
+        box.style.display = 'none';
+    }
+    // https://assets.codepen.io/6093409/river.mp4
+    // https://static.videezy.com/system/resources/previews/000/044/479/original/banana.mp4 
+    // https://static.videezy.com/system/resources/previews/000/004/382/original/COWS_AT_THE_GRASS.mp4
     return (
-        <div id='accueil'> 
-        <Box> 
+        <div id='accueil' style={{height : 'auto', position : 'relative'}}> 
+
+            <video id="background-video1" autoPlay loop muted  style={{ position : 'absolute', zIndex : '1', width : '100vw', height : '100%', top : 0, left : 0, objectFit : "fill", display : 'none'}} >
+                <source id='video-source1' src='https://static.videezy.com/system/resources/previews/000/004/382/original/COWS_AT_THE_GRASS.mp4' type="video/mp4" />
+            </video>                
+            <video id="background-video2" autoPlay loop muted  style={{ position : 'absolute', zIndex : '1', width : '100vw', height : '100%', top : 0, left : 0, objectFit : "fill", display : 'none'}} >
+                <source id='video-source2' src='https://static.videezy.com/system/resources/previews/000/044/479/original/banana.mp4' type="video/mp4" />
+            </video> 
+            <video id="background-video3" autoPlay loop muted  style={{ position : 'absolute', zIndex : '1', width : '100vw', height : '100%', top : 0, left : 0, objectFit : "fill", display : 'none'}} >
+                <source id='video-source3' src='https://assets.codepen.io/6093409/river.mp4' type="video/mp4" />
+            </video>            
+
+
+        <Box id='box' pos='relative' top='0'  zIndex='2'> 
         <Image src='Vector 36.png' pos='absolute' top='130' w='100vw' />
         <Image src='Vector 37.png' pos='absolute' top='240' w='100vw' />
-            <Center>
+
+            <Center >
                 <VStack>
-                    <Heading as='h1' size='3xl' mt={40} pb={5} color='white' zIndex='2'>
+                    <Heading as='h1' size='3xl' mt={40} pb={5} color='white' >
                         Une banque pour les
                     </Heading>
                     <Heading as='h1' size='3xl' pb={20} color='white'>
@@ -33,24 +52,46 @@ export default function Main(props) {
                 </VStack>
             </Center>
 
-            <Box>
+            <Box  >
+
                 <Grid templateColumns='repeat(3, 1fr)' gap='3vw' mt={200} mx={10}>
-                    <GridItem onMouseEnter={() => {
-                        setVideo({ video : 'carte1', playing : true });
-                    }} onMouseLeave={()=> {
-                        setVideo({ video : 'carte1', playing : false });
-                    }} >
+                    <GridItem onMouseEnter={
+                        () => {
+                            setBackgroundVideo(1)
+                        }
+                    } onMouseLeave={
+                        () => {
+                            resetBackgroundVideo(1)
+                        }
+                    } >
                         {Card("Banque","Lorem ipsum dolor sit amet", "image banque.png", "banque")}
                     </GridItem>
-                    <GridItem >
+                    <GridItem onMouseEnter={
+                        () => {
+                            setBackgroundVideo(2)
+                        }
+                    } onMouseLeave={
+                        () => {
+                            resetBackgroundVideo(2)
+                        }
+                    }  >
                         {Card("Logement","Lorem ipsum dolor sit amet", "image logement.png", "logement")}
                     </GridItem>
-                    <GridItem  >
+                    <GridItem onMouseEnter={
+                        () => {
+                            setBackgroundVideo(3)
+                        }
+                    } onMouseLeave={
+                        () => {
+                            resetBackgroundVideo(3)
+                        }
+                    }   >
                         {Card("Mobilité","Lorem ipsum dolor sit amet", "mobilite image.png", "mobilite")}
                     </GridItem>
                 </Grid>
             </Box>
         </Box>
+
         </div>
     );
 }
