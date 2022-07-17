@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import { Button, Center, Heading, VStack, Grid, GridItem, Box, Text, Image, useColorModeValue} from "@chakra-ui/react";
+import { useControllableState, Button, Center, Heading, VStack, Grid, GridItem, Box, Text, Image, useColorModeValue} from "@chakra-ui/react";
 import { AiOutlineToTop } from 'react-icons/ai'
 import {
     Link as LinkScroll
@@ -9,6 +9,12 @@ import ButtonSB from '../component/ButtonSB'
 
 
 export default function Main(props) {
+    const [video, setVideo] = useControllableState({ video : null, playing : false })
+
+    const setBackgroundVideo = () => {
+        const box=document.getElementById("accueil");
+        console.log(box)
+    }
 
     return (
         <div id='accueil'> 
@@ -29,7 +35,11 @@ export default function Main(props) {
 
             <Box>
                 <Grid templateColumns='repeat(3, 1fr)' gap='3vw' mt={200} mx={10}>
-                    <GridItem  >
+                    <GridItem onMouseEnter={() => {
+                        setVideo({ video : 'carte1', playing : true });
+                    }} onMouseLeave={()=> {
+                        setVideo({ video : 'carte1', playing : false });
+                    }} >
                         {Card("Banque","Lorem ipsum dolor sit amet", "image banque.png", "banque")}
                     </GridItem>
                     <GridItem >
