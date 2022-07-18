@@ -6,15 +6,18 @@ import { useColorModeValue } from "@chakra-ui/react"
 
 
 export default function Logement(){
-const innerBoxStyles = {
-    display: 'flex',
-    justifyContent: 'center',
-    bgPosition: 'center',
-    color: useColorModeValue('black', 'white'),
-    fontWeight: 'bold',
-    fontSize: '48px',
-    p: '3%'
-}
+    useEffect(() => {
+        window.scrollTo(0,0);
+    });
+    const innerBoxStyles = {
+        display: 'flex',
+        justifyContent: 'center',
+        bgPosition: 'center',
+        color: useColorModeValue('black', 'white'),
+        fontWeight: 'bold',
+        fontSize: '48px',
+        p: '3%'
+    }
 
 
   return (
@@ -28,7 +31,7 @@ const innerBoxStyles = {
             bgImage ={useColorModeValue("url('BG_telecherger_light.png')" , "url('BG_telecharger_dark.png')")}
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize={useColorModeValue('contain', 'cover')}>
+            bgSize={useColorModeValue('contain', 'cover')} pb={20}>
             <VStack  marginY={10} align="center"  alignSelf={"center"}>
                <Box sx= {innerBoxStyles} fontSize={['sm', 'md', 'lg', 'xl']}>
                     Télécharger l’application

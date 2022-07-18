@@ -3,18 +3,23 @@ import { VStack, HStack } from "@chakra-ui/react"
 import { FormControl, Input, Radio, Stack, Button, Select, useColorModeValue } from '@chakra-ui/react';
 import { Avatar, AvatarBadge } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
+import {useEffect } from 'react';
 
 
 
 export default function Contact(){
- 
+  
+  useEffect(() => {
+    window.scrollTo(0,0);
+  });
+  
   const innerBoxStyles = {
     display: 'center',
     justifyContent: 'center',
     bgPosition: 'center',
     color: useColorModeValue('black', 'white'),
     fontWeight: '600',
-    fontSize: '38px',
+    fontSize: '4xl',
 }
 
 
@@ -31,23 +36,24 @@ export default function Contact(){
     <div height={'100%'} >
         <Box 
             bg={useColorModeValue('white','#231F20')}
-            display='block'
+            display='flex'
             alignItems='center'
             justifyContent='center'
             align='center'
             width='100%'
+            height='100%'
             bgImage = {useColorModeValue("url('BG_contact_light.png')", "url('BG_contact_dark.png')")}
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize={useColorModeValue('cover', 'contain')}>    
+            bgSize={useColorModeValue('cover', 'contain')}  pb={20} >    
           <VStack spacing={3} align="center">
             <Box mt="40px">
               <Stack align={'match-parent'} spacing={4} width={"100%"}>
-              <Text sx= {innerBoxStyles} fontSize={['sm', 'md', 'lg', 'xl']}> Prendre rendez-vous</Text>
+              <Text sx= {innerBoxStyles}>Prendre rendez-vous</Text>
                 <HStack  alignSelf = {'center'}>
                   <Box mt="40px">
-                    <FormControl bg={useColorModeValue('white')} id="picker">
-                      <Input color={useColorModeValue('#737373','#737373')} sx = {formStyle}fontSize={'xl'} width={50} type="date" />
+                    <FormControl id="picker">
+                      <Input  sx = {formStyle}fontSize={'xl'} width={50} type="date" />
                     </FormControl>
                   </Box>
                   <Box>
@@ -83,9 +89,9 @@ export default function Contact(){
                   alignSelf = {'center'}>
                     Valider le rendez vous
                 </Button>
-                <Avatar  size="lg" left="680" src ="robot.png" bg='blackAlpha.100'> 
+                {/* <Avatar  size="lg" left="680" src ="robot.png" bg='blackAlpha.100'> 
                    <AvatarBadge top="-2px"  boxSize="0.95em" bg="green.500"/>
-                </Avatar><br></br>
+                </Avatar><br></br> */}
               </Stack>
             </Box>
           </VStack>    

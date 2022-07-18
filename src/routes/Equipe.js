@@ -1,38 +1,25 @@
-import { Box } from '@chakra-ui/react'
-import { Link } from '@chakra-ui/react'
-import { Image } from '@chakra-ui/react'
+import { Box, Grid, Image, Link , Heading, Avatar, Flex, Text, Stack, Button, useColorModeValue} from '@chakra-ui/react';
 import { SiLinkedin } from 'react-icons/si';
-import { Grid } from "@chakra-ui/react"
-import { extendTheme } from '@chakra-ui/react'
-import { Heading, Avatar, Flex, Text, Stack, Button, useColorModeValue,} from '@chakra-ui/react';
-
-
-const breakpoints = {
-  sm: '320px',
-  md: '768px',
-  lg: '960px',
-  xl: '1200px',
-  '2xl': '1536px',
-}
-
-// 3. Extend the theme
-const theme = extendTheme({ breakpoints })
+import {useEffect } from 'react';
 
 export default function Equipe(){
+    useEffect(() => {
+        window.scrollTo(0,0);
+    });
+
   return (
     <div>
-        <Box display='block'
+        <Box display='flex'
             alignItems='center'
             justifyContent='center'
             width='100%'
-            height='100vh'
-            bgImage = "url('BG_equipe_light.png')" 
+            height='100%'
+            bgImage = {useColorModeValue("url('BG_equipe_light.png')" ,"url('BG_equipe_dark.png')")}
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize='cover'>
-
-            <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>  
-            <Grid templateColumns="repeat(5, 1fr)" p={50} gap={0}>
+            bgSize='cover'
+            pt={'50vh'}>
+            <Grid zIndex={0}   display='grid' templateColumns="repeat(5, 1fr)" p={50} margin={0}>
                 <Box p={8}
                     maxW={'200px'}
                     w={'full'}

@@ -1,9 +1,12 @@
 import { Box, VStack, Stack} from '@chakra-ui/react'
-import { extendTheme } from '@chakra-ui/react'
 import { FormControl, Input, Button, Select,SimpleGrid, Link, Avatar, AvatarBadge } from '@chakra-ui/react';
 import { useColorModeValue } from "@chakra-ui/react"
 
 export default function Logement(){
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  });
   const formStyle = {
     border:'2px',
     borderColor: useColorModeValue('black', 'white'),
@@ -22,7 +25,7 @@ export default function Logement(){
             bgPosition="center" 
             bgRepeat="no-repeat"
             bgColor={useColorModeValue('white','black')}
-            bgSize='contain'> 
+            bgSize='cover' pb={20}> 
             <VStack marginY={15} spacing={3} align="center" p={'10'} >
               <SimpleGrid bgGradient={'linear(to-l, #ED174C, #F58220)'} border='5px' borderWidth={20} marginX={20} columns={2} rows={2} spacingY={50}>
                 <Box bgGradient={'linear(to-l, #ED174C, #F58220)'} height="40px" w={'200px'} >
@@ -69,9 +72,9 @@ export default function Logement(){
                   alignSelf = {'center'}>
                    Se faire contacter
                 </Button>
-                <Avatar size="lg" left="680"  top="-5px"  src ="robot.png" bg='blackAlpha.100'> 
+                {/* <Avatar size="lg" left="680"  top="-5px"  src ="robot.png" bg='blackAlpha.100'> 
                   <AvatarBadge top="-2px"  boxSize="0.95em" bg="green.500"/>
-                </Avatar><br></br> <br></br><br></br>
+                </Avatar><br></br> <br></br><br></br> */}
               </Stack>
             </Box>   
           </VStack> 
