@@ -14,6 +14,7 @@ import Mission from "./routes/Mission";
 import Equipe from "./routes/Equipe";
 import Contact from "./routes/Contact";
 import Accueil from './routes/Accueil';
+import Application from './routes/Application';
 
 import theme from './theme';
 import App from './App';
@@ -26,7 +27,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} >
         <Route exact path="/" element={<Accueil />} />
-
+        <Route exact path="application" element={<Application />} />
         <Route path="mission" element={<Mission />} />
         <Route path="equipe" element={<Equipe />} />
         <Route path="contact" element={<Contact />} />

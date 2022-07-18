@@ -4,7 +4,7 @@ import { Text } from "@chakra-ui/react"
 import { useColorModeValue } from "@chakra-ui/react"
 
 
-export default function Equipe(){
+export default function Mission(){
   return (
     <div style={{backgroundColor :'white'}} >
         <Box 

@@ -52,7 +52,7 @@ export default function Depense(props) {
                                     {container.Paragraph2}
                                 </Text>
                                 <Center pt={10}>
-                                    {ButtonSB(container.ButtonText)}
+                                    {ButtonSB(container.ButtonText, "/application")}
                                 </Center>
                             </VStack>
                     </GridItem>

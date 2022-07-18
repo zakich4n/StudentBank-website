@@ -1,7 +1,7 @@
 
-import { Button, useColorModeValue} from "@chakra-ui/react";
+import { Button, LinkBox, LinkOverlay, useColorModeValue} from "@chakra-ui/react";
 
-export default function ButtonSB(titre, props) {
+export default function ButtonSB(titre, link, props) {
     const theme = useColorModeValue({
         borderC : 'white',
         bgGrad :'linear(to-r, #ED174C, #F58220)'
@@ -12,16 +12,27 @@ export default function ButtonSB(titre, props) {
 
     if(titre) {
         return (
-            <Button
-            px='30px'
-            size='lg'
-            border='2px' 
-            borderColor={theme.borderC}
-            color='white'
-            bgGradient={theme.bgGrad}
-            borderRadius={10}
-            {...props}
-            >{titre}</Button>
+            <LinkBox>
+            <LinkOverlay href={link}>
+                <Button
+                px='30px'
+                size='lg'
+                border='2px' 
+                borderColor={theme.borderC}
+                color='white'
+                bgGradient={theme.bgGrad}
+                borderRadius={10}
+                {...props}
+                _hover={{
+                    bg: '#ED174C'
+                }}
+                >
+                    {titre}
+                </Button>
+            </LinkOverlay>
+
+            </LinkBox>
+
         )
     }
     return;

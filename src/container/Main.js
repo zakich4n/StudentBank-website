@@ -23,7 +23,7 @@ export default function Main(props) {
                     <Heading as='h1' size='3xl' pb={20} color='white'>
                         étudiants
                     </Heading>
-                    {ButtonSB("Être accompagné")}
+                    {ButtonSB("Être accompagné","/application")}
                 </VStack>
             </Center>
 
