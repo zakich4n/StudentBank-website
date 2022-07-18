@@ -78,19 +78,20 @@ function Mobile(props) {
         gridTemplateRows={'100px 1fr'}
         gridTemplateColumns={'1fr 40vw'}
         gap={4}
+        pos='relative'
         {...props}
         >
-            <GridItem colSpan={2}  >
+            <GridItem colSpan={1} rowSpan={1}  >
                 <Center h='100%' pos='relative' >
                     <Heading as='h2' size='2xl' pos='absolute' bottom={-5}>{container.MainHeader}</Heading>
                 </Center>
             </GridItem>
-            <GridItem rowSpan={1} colSpan={1}  >
+            <GridItem rowSpan={1} colSpan={1}   >
                 <Box  overflow='hidden' w='30%' >
                     <Image src="SB_BanquePhoneMobil.png" />
                 </Box>
             </GridItem>
-            <GridItem colSpan={1} rowSpan={1}  pos='relative' >
+            <GridItem colSpan={2} rowSpan={1}  pos='relative'  >
                 <VStack 
                 textAlign='start' 
                 pos='absolute' 
