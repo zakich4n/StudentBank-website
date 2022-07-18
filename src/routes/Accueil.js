@@ -13,6 +13,9 @@ import Carte from '../container/Carte'
 import Avantages from '../container/Avantages'
 import Location from '../container/Location.js';
 import International from '../container/International.js';
+import PartenaireCarousel from '../container/PartenaireCarousel'
+import Temoignage from '../container/Temoignage.js';
+
 
 export default function Accueil() {
 
@@ -76,11 +79,19 @@ export default function Accueil() {
         <Box bgGradient={colorTheme.bg} w='100%'>
             <Main/>
             <Video/>
-            <Depense/>
-            <Carte/>
-            <Avantages/>
+            <div id="banque">
+                <Depense/>
+                <Carte/>
+                <Avantages/>                
+            </div>
+            <div id='logement'>
             <Location/>
-            <International/>
+            </div>
+            <div id="mobilite">
+                <International/>
+            </div>
+            <Temoignage/>
+            <PartenaireCarousel/>
             <ScrollToTop/>
         </Box>
     )
