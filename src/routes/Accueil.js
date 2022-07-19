@@ -74,7 +74,9 @@ export default function Accueil() {
 
     return (
         <Box bgGradient={colorTheme.bg} w='100%'>
-            <Carte/>
+{/*             <Depense/>
+            <Carte/> */}
+            <Location/>
         </Box>
     )
 }

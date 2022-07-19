@@ -109,7 +109,7 @@ function Mobile(props) {
     }
     return (
         <Box {...props}>
-               <Box w='100vw' h='60vh' minH={'480px'} bg='papayawhip' pos='relative'>
+               <Box w='100vw' h='60vh' minH={'480px'} bg='white' pos='relative'>
                     <Heading as="h1" size='xl' pl={8} pt={2}>Nos cartes </Heading>
                     <Box pos='relative' h={"40vh"} >
                         <Image 

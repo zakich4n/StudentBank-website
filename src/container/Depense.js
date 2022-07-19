@@ -71,21 +71,21 @@ function Desktop(props) {
 
 function Mobile(props) {
     return (
-        <Box>
+        <Box {...props}>
             <Box bg='white' h='35vh' w="100vw" pos='relative' mt={10}>
 
-                <Center  pos='absolute' right={0} bottom={0} w='50%' h='100%' p={5}>
-                    <Heading as="h1"  size='3xl' lineHeight={'1.4'}> Une banque pour les étudiants</Heading>
+                <Center  pos='absolute' right={0} bottom={0} w='50%' h='100%' p={3}>
+                    <Heading as="h1"  size='2xl' lineHeight={'1.4'}> Une banque pour les étudiants</Heading>
                 </Center>
                 <Box bg='white' h='100%' w='50%' pos='absolute' left='0'  >
                     <Image src='SB_BanquePhoneMobil.png' objectFit='fill' h='100%' bottom={0} pos='absolute' />
                 </Box>
             </Box>  
-            <Box  h='25vh' minH={'200px'} maxH={'300px'} w='100vw'    z-index="2">
+            <Box  h='25vh' minH={'220px'} maxH={'300px'} w='100vw'    z-index="2">
                 <Text py={'20px'} px={'35px'} fontSize='md'>
                     Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                 </Text>
-                <Box pl={'35px'}>
+                <Box pl={'35px'} >
                     {ButtonSB(container.ButtonText, "/application")}
                 </Box> 
             </Box>          

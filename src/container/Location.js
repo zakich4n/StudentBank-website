@@ -22,7 +22,28 @@ export default function Location() {
 
     return (
         <Box bg={container.theme.bg}>
-                <Grid
+            <Desktop display={{base : 'none', md : 'grid'}}/>    
+            <Mobile display={{base : 'inherit', md : 'none'}} />    
+        </Box>
+    )
+}
+function Desktop(props) {
+    const container ={  /* inversed=false, MainHeader, SmallHeader, Paragraph1, Paragraph2="", ButtonText, Image_url */
+    MainHeader : "Aide à la location",
+    SmallHeader : "Louer",
+    Paragraph1 : "Studentbank n’est pas qu’une carte bancaire pour étudiant, vos problématiques sont au cœur de nos priorités, nous vous accompagnons dans vos recherches, la location et la gestion de votre logement étudiant. ",
+    Paragraph2 : "Vous pourriez souscrire à la caution, la garantie et l’assurance immobilière sur notre plateforme. Les étudiants étrangers et internationaux ! Réservez votre logement étudiant dans votre pays de destination avant votre départ. ",
+    ButtonText : "Louer un bien", 
+        theme : useColorModeValue({
+            Image_url :"3dhousewhite.png",
+            bg : 'white'
+        },{
+            Image_url :"3droomtestv2BLACK.png",
+            bg : null
+        })
+    }
+    return (
+        <Grid
                 w='100%'
                 templateRows='repeat(2, 1fr)'
                 templateColumns='repeat(2, 1fr)'
@@ -30,6 +51,7 @@ export default function Location() {
                 gridTemplateColumns={'40vw 1fr'}
                 gap={4}
                 pb={'20vh'}
+                {...props}
                 >
                     <GridItem colSpan={2} >
                         <Center h='100%' pos='relative' >
@@ -65,6 +87,69 @@ export default function Location() {
                         </Center>
                     </GridItem>
                 </Grid>
+    )
+}
+
+function Mobile(props) {
+    const container ={  /* inversed=false, MainHeader, SmallHeader, Paragraph1, Paragraph2="", ButtonText, Image_url */
+    MainHeader : "Aide à la location",
+    SmallHeader : "Louer",
+    Paragraph1 : "Studentbank n’est pas qu’une carte bancaire pour étudiant, vos problématiques sont au cœur de nos priorités, nous vous accompagnons dans vos recherches, la location et la gestion de votre logement étudiant. ",
+    Paragraph2 : "Vous pourriez souscrire à la caution, la garantie et l’assurance immobilière sur notre plateforme. Les étudiants étrangers et internationaux ! Réservez votre logement étudiant dans votre pays de destination avant votre départ. ",
+    ButtonText : "Louer un bien", 
+        theme : useColorModeValue({
+            Image_url :"3dhousewhite.png",
+            bg : 'white'
+        },{
+            Image_url :"3droomtestv2BLACK.png",
+            bg : null
+        })
+    }
+    return (
+        <Box {...props}
+
+        >
+            <Image 
+            src={container.theme.Image_url} 
+            pos='absolute' 
+            opacity={'0.2'} 
+            objectFit='cover' 
+            w='150%' 
+            h='45vh'
+            overflow='hidden' 
+            maxWidth='200%' 
+            left='50%' 
+            transform={'translateX(-50%)'} 
+            />
+            <Box 
+            h='45vh' 
+            minH={"350px"}
+            w="100vw" 
+            pos='relative'
+            py={3}
+            px={6}
+            >
+                <Heading 
+                as="h1"
+                size='2xl' 
+                lineHeight={'1.4'}
+                > Location</Heading>
+                <Text fontSize='md' my={4}>
+                    Nous vous accompagnons dans vos recherches, la location et la gestion de votre logement étudiant. 
+                    Vous pourriez souscrire à la caution, la garantie et l’assurance immobilière sur notre plateforme. Réservez votre logement étudiant dans votre pays de destination avant votre départ. 
+                </Text>
+                <Box 
+                w='100%'
+                mr='auto'
+                display='flex'
+                justifyContent='flex-end'
+                my={10}
+                >
+                    {ButtonSB(container.ButtonText, "/application")}
+                </Box> 
             </Box>
+        </Box>
+
+
     )
 }
