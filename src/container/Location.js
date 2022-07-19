@@ -107,7 +107,8 @@ function Mobile(props) {
     }
     return (
         <Box {...props}
-
+            pos='relative'
+            h='45vh' 
         >
             <Image 
             src={container.theme.Image_url} 
@@ -115,17 +116,16 @@ function Mobile(props) {
             opacity={'0.2'} 
             objectFit='cover' 
             w='150%' 
-            h='45vh'
+            h='100%'
             overflow='hidden' 
             maxWidth='200%' 
             left='50%' 
             transform={'translateX(-50%)'} 
             />
             <Box 
-            h='45vh' 
+            h='100%'
             minH={"350px"}
             w="100vw" 
-            pos='relative'
             py={3}
             px={6}
             >

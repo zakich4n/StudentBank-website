@@ -15,7 +15,7 @@ export default function Depense(props) {
 
     return (
         <Box >
-            <Desktop display={{base : 'none', md : 'inherit'}}/>    
+            <Desktop display={{base : 'none', md : 'grid'}}/>    
             <Mobile display={{base : 'inherit', md : 'none'}} />    
         </Box>
     );
@@ -81,7 +81,7 @@ function Mobile(props) {
                     <Image src='SB_BanquePhoneMobil.png' objectFit='fill' h='100%' bottom={0} pos='absolute' />
                 </Box>
             </Box>  
-            <Box  h='25vh' minH={'220px'} maxH={'300px'} w='100vw'    z-index="2">
+            <Box  h='25vh' minH={'200px'} maxH={'300px'} w='100vw'    z-index="2">
                 <Text py={'20px'} px={'35px'} fontSize='md'>
                     Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                 </Text>
