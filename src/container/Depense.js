@@ -71,43 +71,26 @@ function Desktop(props) {
 
 function Mobile(props) {
     return (
-        <Grid
-        w='100%'
-        templateRows='repeat(2, 1fr)'
-        templateColumns='repeat(2, 1fr)'
-        gridTemplateRows={'100px 1fr'}
-        gridTemplateColumns={'1fr 40vw'}
-        gap={4}
-        pos='relative'
-        {...props}
-        >
-            <GridItem colSpan={1} rowSpan={1}  >
-                <Center h='100%' pos='relative' >
-                    <Heading as='h2' size='2xl' pos='absolute' bottom={-5}>{container.MainHeader}</Heading>
+        <Box>
+            <Box bg='white' h='35vh' w="100vw" pos='relative' mt={10}>
+
+                <Center  pos='absolute' right={0} bottom={0} w='50%' h='100%' p={5}>
+                    <Heading as="h1"  size='3xl' lineHeight={'1.4'}> Une banque pour les étudiants</Heading>
                 </Center>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}   >
-                <Box  overflow='hidden' w='30%' >
-                    <Image src="SB_BanquePhoneMobil.png" />
+                <Box bg='white' h='100%' w='50%' pos='absolute' left='0'  >
+                    <Image src='SB_BanquePhoneMobil.png' objectFit='fill' h='100%' bottom={0} pos='absolute' />
                 </Box>
-            </GridItem>
-            <GridItem colSpan={2} rowSpan={1}  pos='relative'  >
-                <VStack 
-                textAlign='start' 
-                pos='absolute' 
-                top='50%' 
-                transform='translateY(-50%)'
-                left='-20%'
-                right='20%'
-                >
-                        <Text fontSize='xl' pb={4}>
-                            {container.Paragraph1}
-                        </Text>
-                        <Center pt={10}>
-                            {ButtonSB(container.ButtonText, "/application")}
-                        </Center>
-                    </VStack>
-            </GridItem>
-        </Grid>
+            </Box>  
+            <Box  h='25vh' minH={'200px'} maxH={'300px'} w='100vw'    z-index="2">
+                <Text py={'20px'} px={'35px'} fontSize='md'>
+                    Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
+                </Text>
+                <Box pl={'35px'}>
+                    {ButtonSB(container.ButtonText, "/application")}
+                </Box> 
+            </Box>          
+        </Box>
+
+
     )
 }

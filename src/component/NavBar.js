@@ -70,7 +70,7 @@ export default function NavBar(props) {
     const shadow=useColorModeValue('xl','dark-lg');
 
     return(
-    <Box  h={10} w='100%'
+    <Box  h={'5vh'} w='100%'
     position='sticky'
     top='0'
     {...props}
