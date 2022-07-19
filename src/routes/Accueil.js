@@ -74,14 +74,7 @@ export default function Accueil() {
 
     return (
         <Box bgGradient={colorTheme.bg} w='100%'>
-            <Main/>
-            <Video/>
             <Depense/>
-            <Carte/>
-            <Avantages/>
-            <Location/>
-            <International/>
-            <ScrollToTop/>
         </Box>
     )
 }
