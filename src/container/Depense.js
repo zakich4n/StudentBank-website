@@ -94,11 +94,11 @@ function Mobile(props) {
                 </Box>
             </Box>  
             <Box  h='25vh' minH={'200px'} maxH={'300px'} w='100vw'    z-index="2">
-                <Text py={'20px'} px={'35px'} fontSize='md'>
+                <Text py={'5vw'} px={'3vw'} fontSize='3.8 vw'>
                     Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                 </Text>
-                <Box pl={'35px'} >
-                    {ButtonSB(container.ButtonText, "/application")}
+                <Box pl={'5vw'} >
+                    {ButtonSB(container.ButtonText, "/application", {height : '12vw', minHeight : '40px', maxHeight : '50px'})}
                 </Box> 
             </Box>          
         </Box>
