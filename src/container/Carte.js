@@ -108,27 +108,32 @@ function Mobile(props) {
         })
     }
     return (
-        <Box {...props}>
-               <Box w='100vw' h='60vh' minH={'480px'} bg='white' pos='relative'>
-                    <Heading as="h1" size='xl' pl={8} pt={2}>Nos cartes </Heading>
-                    <Box pos='relative' h={"40vh"} >
+        <Box {...props}
+        w='100vw' h='60vh' minH={'480px'} bg='white'
+        >
+               <Grid >
+                    <GridItem h={'50px'}>
+                        <Heading as="h1" size='xl' pl={8} pt={2} >Nos cartes </Heading>
+                    </GridItem>
+
+                    <GridItem pos='relative' h={"55vw"} maxH={'300px'} >
                         <Image 
                         src='whitecard_mockup 1.png'  
                         pos='absolute' 
-                        w='90%' 
+                        w='90%' maxW={'450px'}
                         left='50%' 
                         transform={'translateX(-50%)'} 
                         />
-                        <Text pos='absolute' bottom={5} right={10} fontWeight={700} >MAYA</Text>                        
-                    </Box>
-                    <Box my={6} mx={10} pos='absolute' bottom={0} >
+                        <Text pos='absolute' bottom={'calc(50px - 100%)'} right={10} fontWeight={700} >MAYA</Text>                        
+                    </GridItem>
+                    <GridItem my={6} mx={10}  >
                         <Text  fontSize='md'>
                             Payez en ligne, en magasin ou dans vos sites favoris, sans frais et en toute sécurité. Nos cartes ENKI, MAYA, HORIZON et EXOTIC vous assurent dans tous vos voyages et la gratuité des frais de retrait à l’international.
                         </Text>                        
-                    </Box>
+                    </GridItem>
 
 
-               </Box>
+               </Grid>
         </Box>
 
 
