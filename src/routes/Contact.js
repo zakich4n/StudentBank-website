@@ -106,10 +106,10 @@ export default function Contact(){
 }
 
 
-const calendar = document.getElementById('picker');
-calendar.addEventListener('click', () =>{
-  // $('#picker').DatePicker('show');
-});
+// const calendar = document.getElementById('picker');
+// calendar.addEventListener('click', () =>{
+//   // $('#picker').DatePicker('show');
+// });
 
 
 
