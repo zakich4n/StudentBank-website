@@ -6,14 +6,14 @@ import {
 } from 'react-scroll';
 import ScrollToTop from '../component/ScrollToTop.js';
 
-import Main from '../container/Main.js'
-import Video from '../container/Video.js';
-import Depense from '../container/Depense'
-import Carte from '../container/Carte'
-import Avantages from '../container/Avantages'
+import Main from '../container/Main.js';
+import Video from '../container/Video';
+import Depense from '../container/Depense';
+import Carte from '../container/Carte';
+import Avantages from '../container/Avantages';
 import Location from '../container/Location.js';
 import International from '../container/International.js';
-import PartenaireCarousel from '../container/PartenaireCarousel'
+import PartenaireCarousel from '../container/PartenaireCarousel';
 import Temoignage from '../container/Temoignage.js';
 
 
