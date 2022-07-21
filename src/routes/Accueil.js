@@ -77,6 +77,7 @@ export default function Accueil() {
             <Depense/>
             <Carte/>
             <Location/>
+            <Avantages/>
         </Box>
     )
 }
