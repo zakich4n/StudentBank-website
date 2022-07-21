@@ -5,7 +5,7 @@ import { Box} from "@chakra-ui/react";
 export default function Video(props) {
 
     return (
-        <Box h='870px' w='100%' bg='white'> {/* Video de presentation */}
+        <Box h='870px' w='100%' bg='white' {...props}> {/* Video de presentation */}
                         
         <iframe
             width='100%'

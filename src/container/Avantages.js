@@ -76,15 +76,16 @@ function Mobile(props) {
         <Box {...props}
         pos='relative'
         h='55vh' 
+        minH={"330px"}
         bgGradient={'linear(to-r, rgba(251, 203, 194, 0.7), rgba(251, 203, 194, 0.7))'}
         >
             <Image 
             src={container.Image_url} 
             pos='absolute' 
-            opacity={'0.2'} 
+            opacity={'0.3'} 
             objectFit='cover' 
             w='150%' 
-            h='80%'
+            h='60%'
             bottom={0}
             overflow='hidden' 
             maxWidth='200%' 
@@ -113,9 +114,9 @@ function Mobile(props) {
                     />
                 </GridItem>
                 <GridItem>
-                    <Text fontSize='3.8vw' my={'2vw'} px={6}>
+                    <Text fontSize='3.8vw' my={'2vw'} px={6} >
                         {container.Paragraph1}
-                        <br/>
+                        <Text visibility={'hidden'}>Zak was here 🤫</Text>
                         {container.Paragraph2}
                     </Text>                    
                 </GridItem>

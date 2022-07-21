@@ -72,7 +72,7 @@ function Desktop(props) {
 function Mobile(props) {
     return (
         <Box {...props}>
-            <Box bg='white' h='35vh' w="100vw" pos='relative' >
+            <Box bg='white' h='35vh' w="100vw"  minH='220px' pos='relative' >
 
                 <Box 
                 pos='absolute' 

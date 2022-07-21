@@ -74,10 +74,14 @@ export default function Accueil() {
 
     return (
         <Box bgGradient={colorTheme.bg} w='100%'>
+            <Main display={{base : 'none', md : 'grid'}}/>
+            <Video display={{base : 'none', md : 'grid'}}/>
             <Depense/>
             <Carte/>
-            <Location/>
             <Avantages/>
+            <Location/>
+            <International />
+            <ScrollToTop display={{md : null, base : "none"}}/>
         </Box>
     )
 }
