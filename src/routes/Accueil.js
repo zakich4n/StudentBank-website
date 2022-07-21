@@ -90,9 +90,9 @@ export default function Accueil() {
             <div id="mobilite">
                 <International/>
             </div>
-            <Temoignage display={{md : null, base : "none"}}/>
-            <PartenaireCarousel display={{md : null, base : "none"}}/>
-            <ScrollToTop display={{md : null, base : "none"}}/>
+            <Temoignage display={{md : 'grid', base : "none"}}/>
+            <PartenaireCarousel display={{md : "block", base : "none"}}/>
+            <ScrollToTop display={{md : "grid", base : "none"}}/>
         </Box>
     )
 }

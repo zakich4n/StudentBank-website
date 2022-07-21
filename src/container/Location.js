@@ -115,7 +115,7 @@ function Mobile(props) {
         <Box {...props}
             pos='relative'
             h='55vh' 
-            bgGradient={'linear(to-r, rgba(251, 203, 194, 0.7), rgba(251, 203, 194, 0.7))'}
+            
         >
             <Image 
             src={container.theme.Image_url} 

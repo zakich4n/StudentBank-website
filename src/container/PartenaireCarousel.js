@@ -7,7 +7,7 @@ import Slider from 'react-slick';
 
 // Settings for the slider
 const settings = {
-  dots: true,
+  dots: false,
   arrows: false,
   infinite: true,
   autoplay: true,
@@ -53,7 +53,7 @@ export default function PartenaireCarousel(props) {
   return (
     <Box
       position={'relative'}
-      height={'30vh'}
+      
       width={'full'}
       overflow={'hidden'}
       bg={useColorModeValue('white', 'gray.800')}
