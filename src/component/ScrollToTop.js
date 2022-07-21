@@ -4,7 +4,7 @@ import { AiOutlineToTop } from 'react-icons/ai'
 import { Button} from "@chakra-ui/react";
 
 
-export default function ScrollToTop() {
+export default function ScrollToTop(props) {
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -38,6 +38,7 @@ export default function ScrollToTop() {
         display: visible ? 'inline' : 'none'
         }}
         leftIcon={<AiOutlineToTop/>}
+        {...props}
         >
             Haut de page
         </Button>

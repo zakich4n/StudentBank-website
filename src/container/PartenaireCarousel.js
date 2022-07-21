@@ -19,7 +19,7 @@ const settings = {
   slidesToScroll: 3
 };
 
-export default function PartenaireCarousel() {
+export default function PartenaireCarousel(props) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = React.useState(null);
@@ -57,6 +57,7 @@ export default function PartenaireCarousel() {
       width={'full'}
       overflow={'hidden'}
       bg={useColorModeValue('white', 'gray.800')}
+      {...props}
       >
       {/* CSS files for react-slick */}
       <link

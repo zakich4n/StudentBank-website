@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import { useControllableState, Button, Center, Heading, VStack, Grid, GridItem, Box, Text, Image, useColorModeValue} from "@chakra-ui/react";
+import { chakra, useControllableState, Button, Center, Heading, VStack, Grid, GridItem, Box, Text, Image, useColorModeValue} from "@chakra-ui/react";
 import { AiOutlineToTop } from 'react-icons/ai'
 import {
     Link as LinkScroll
@@ -23,7 +23,7 @@ export default function Main(props) {
     // https://static.videezy.com/system/resources/previews/000/044/479/original/banana.mp4 
     // https://static.videezy.com/system/resources/previews/000/004/382/original/COWS_AT_THE_GRASS.mp4
     return (
-        <div id='accueil' style={{height : 'auto', position : 'relative'}}> 
+        <chakra.div id='accueil' style={{height : 'auto', position : 'relative'}} {...props}> 
 
             <video id="background-video1" autoPlay loop muted  style={{ position : 'absolute', zIndex : '1', width : '100vw', height : '100%', top : 0, left : 0, objectFit : "fill", display : 'none'}} >
                 <source id='video-source1' src='https://static.videezy.com/system/resources/previews/000/004/382/original/COWS_AT_THE_GRASS.mp4' type="video/mp4" />
@@ -92,7 +92,7 @@ export default function Main(props) {
             </Box>
         </Box>
 
-        </div>
+        </chakra.div>
     );
 }
 

@@ -1,7 +1,7 @@
 import { Box, SimpleGrid } from '@chakra-ui/react'
 import Avis from '../component/Avis'
 
-export default function Temoignage() {
+export default function Temoignage(props) {
 {/*             {Avis(
             "Zaki G.", 
             "HEI Lille", 
@@ -10,7 +10,7 @@ export default function Temoignage() {
             } */}
 
     return (
-        <Box w="100vw">
+        <Box w="100vw" {...props}>
             <SimpleGrid columns={{sm: 1, md : 2, base: 2}}>
             {Avis(
             "Zaki G.", 

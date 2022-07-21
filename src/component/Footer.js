@@ -82,7 +82,7 @@ import {
     );
   };
   
-  export default function Footer() {
+  export default function Footer(props) {
     const shadow=useColorModeValue('dark-lg','dark-lg');
 
     return (
@@ -93,10 +93,11 @@ import {
         width='100%'
         bottom='0'
         boxShadow={shadow}
+        {...props}
         >
         <Container as={Stack} maxW={'6xl'} py={10}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-            <Stack align={'flex-start'}>
+            <Stack align={'flex-start'} display={{md : null, base : "none"}}>
               <ListHeader>ESPACE</ListHeader>
               <Link href={'#'}>Étudiants</Link>
               <Link href={'#'}>Étudiants étranger</Link>

@@ -77,8 +77,8 @@ export default function Accueil() {
 
     return (
         <Box bgGradient={colorTheme.bg} w='100%'>
-            <Main/>
-            <Video/>
+            <Main display={{base : 'none', md : 'grid'}}/>
+            <Video display={{base : 'none', md : 'grid'}}/>
             <div id="banque">
                 <Depense/>
                 <Carte/>
@@ -90,9 +90,9 @@ export default function Accueil() {
             <div id="mobilite">
                 <International/>
             </div>
-            <Temoignage/>
-            <PartenaireCarousel/>
-            <ScrollToTop/>
+            <Temoignage display={{md : null, base : "none"}}/>
+            <PartenaireCarousel display={{md : null, base : "none"}}/>
+            <ScrollToTop display={{md : null, base : "none"}}/>
         </Box>
     )
 }
