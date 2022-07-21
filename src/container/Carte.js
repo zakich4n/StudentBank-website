@@ -109,7 +109,7 @@ function Mobile(props) {
     }
     return (
         <Box {...props}
-        w='100vw' h='60vh' minH={'480px'} bg='white'
+        w='100vw' h='58vh' minH={'480px'} bg='white'
         >
                <Grid >
                     <GridItem h={'50px'}>
@@ -124,7 +124,7 @@ function Mobile(props) {
                         left='50%' 
                         transform={'translateX(-50%)'} 
                         />
-                        <Text pos='absolute' bottom={'calc(50px - 100%)'} right={10} fontWeight={700} >MAYA</Text>                        
+                        <Text pos='absolute' bottom={'10px'} right={'max(15vw,50px)'} fontWeight={700} >MAYA</Text>                        
                     </GridItem>
                     <GridItem my={6} mx={10}  >
                         <Text  fontSize='md'>

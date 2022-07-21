@@ -70,7 +70,7 @@ export default function NavBar(props) {
     const shadow=useColorModeValue('xl','dark-lg');
 
     return(
-    <Box  h={'5vh'} w='100%'
+    <Box  h={'55px'} w='100%'
     position='sticky'
     top='0'
     {...props}
@@ -141,20 +141,42 @@ function MobileNavBar(props) {
     return ( 
     <Box 
     bg={background_color}
+    h='55px'
+/*     minH='35px'
+    maxH='50px' */
+    pos='relative'
     {...props}
     >
         
-        <Grid templateColumns='repeat(2, 40vw)'>
-            <GridItem>
-                <IconButton ref={btnRef}  onClick={onOpen} icon={<GrMenu/>} variant="ghost"  />
-            </GridItem>
-            <GridItem>
-                <Link as={ReachLink} to="/">
-                    <Image h={8}  src="MobilLogoSB.png" />
-                </Link>                
-            </GridItem>
 
-        </Grid>
+        <Box
+        pos='absolute'
+        top='50%'
+        transform={'translateY(-50%)'} 
+        >
+            <IconButton ref={btnRef}  onClick={onOpen} icon={<GrMenu/>} variant="ghost" size='lg' isRound />
+        </Box>
+
+            <Box 
+            pos='absolute'
+            left='50%' 
+            transform={'translateX(-50%) translateY(-50%)'} 
+            top='50%'
+            >
+                <Link as={ReachLink} to="/">
+                    <Image h={'40px'}  src="MobilLogoSB.png" />
+                </Link>                 
+            </Box>
+               
+            <Box
+            pos='absolute'
+            top='50%'
+            transform={'translateY(-50%)'} 
+            right={0}
+            >
+                <ColorModeSwitcher size='lg' isRound  />
+            </Box>
+
 
 
         <Drawer
@@ -213,7 +235,6 @@ function MobileNavBar(props) {
   
             <DrawerFooter>
             <LanguageSwitcher  />
-            <ColorModeSwitcher  />
             </DrawerFooter>
           </DrawerContent>
         </Drawer>

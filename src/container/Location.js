@@ -108,7 +108,8 @@ function Mobile(props) {
     return (
         <Box {...props}
             pos='relative'
-            h='45vh' 
+            h='55vh' 
+            bgGradient={'linear(to-r, rgba(251, 203, 194, 0.7), rgba(251, 203, 194, 0.7))'}
         >
             <Image 
             src={container.theme.Image_url} 
@@ -122,32 +123,35 @@ function Mobile(props) {
             left='50%' 
             transform={'translateX(-50%)'} 
             />
-            <Box 
+            <Grid
             h='100%'
             minH={"350px"}
             w="100vw" 
             py={3}
             px={6}
             >
-                <Heading 
-                as="h1"
-                size='2xl' 
-                lineHeight={'1.4'}
-                > Location</Heading>
-                <Text fontSize='md' my={4}>
-                    Nous vous accompagnons dans vos recherches, la location et la gestion de votre logement étudiant. 
-                    Vous pourriez souscrire à la caution, la garantie et l’assurance immobilière sur notre plateforme. Réservez votre logement étudiant dans votre pays de destination avant votre départ. 
-                </Text>
-                <Box 
+                <GridItem>
+                    <Heading 
+                    as="h1"
+                    size='2xl' 
+                    lineHeight={'1.4'}
+                    > Location</Heading>                
+                </GridItem>
+                <GridItem>
+                    <Text fontSize='3.8vw' my={'2vw'}>
+                        Nous vous accompagnons dans vos recherches, la location et la gestion de votre logement étudiant. 
+                        Vous pourriez souscrire à la caution, la garantie et l’assurance immobilière sur notre plateforme. Réservez votre logement étudiant dans votre pays de destination avant votre départ. 
+                    </Text>                    
+                </GridItem>
+                <GridItem 
                 w='100%'
                 mr='auto'
                 display='flex'
                 justifyContent='flex-end'
-                my={10}
                 >
-                    {ButtonSB(container.ButtonText, "/application")}
-                </Box> 
-            </Box>
+                    {ButtonSB(container.ButtonText, "/application", {height : '12vw', minHeight : '40px', maxHeight : '50px'})}
+                </GridItem> 
+            </Grid>
         </Box>
 
 

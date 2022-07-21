@@ -72,9 +72,9 @@ function Desktop(props) {
 function Mobile(props) {
     return (
         <Box {...props}>
-            <Box bg='papayawhip' h='35vh' w="100vw" pos='relative' mt={10}>
+            <Box bg='white' h='35vh' w="100vw" pos='relative' >
 
-                <Box bg='grey' 
+                <Box 
                 pos='absolute' 
                 right={0} bottom={0} 
                 w='50%' h='100%' 
@@ -83,12 +83,12 @@ function Mobile(props) {
                 >
                     <Heading as="h1"  fontSize='8vw'  lineHeight={'1.4'}> Une banque pour les étudiants</Heading>
                 </Box>
-                <Box bg='tomato' h='100%' w='50%'  pos='absolute' left='0'  >
+                <Box  h='100%' w='50%'  pos='absolute' left='0'  >
                     <Image 
                     src='SB_BanquePhoneMobil.png' 
                     objectFit='fill' 
                     w='100%' h='auto' 
-                    maxH={'35vh'}  maxW='280px'
+                    maxH={'35vh'}  maxW='280px' minH='220px'
                     bottom={0} 
                     pos='absolute' />
                 </Box>
