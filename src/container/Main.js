@@ -13,8 +13,8 @@ export default function Main(props) {
     return (
         <div id='accueil' > 
         <Box {...props}> 
-        <Image src='Vector 36.png' pos='absolute' top='130' w='100vw' />
-        <Image src='Vector 37.png' pos='absolute' top='240' w='100vw' />
+        <Image src='Vector 36.png' pos='absolute' top='130' minW='100vw' />
+        <Image src='Vector 37.png' pos='absolute' top='240' minW='100vw' />
             <Center>
                 <VStack>
                     <Heading as='h1' size='3xl' mt={40} pb={5} color='white' zIndex='2'>

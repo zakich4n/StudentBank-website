@@ -52,33 +52,34 @@ function Desktop(props) {
         gridTemplateRows={'100px 1fr'}
         gridTemplateColumns={'40vw 1fr'}
         gap={4}
-        pb={'20vh'}
+        pb={'12vh'}
         {...props}
         >
             <GridItem colSpan={2} >
                 <Center h='100%' pos='relative' >
-                    <Heading as='h2' size='2xl' pos='absolute' >{container.MainHeader}</Heading>
+                    <Heading as='h2' fontSize='4vw'  pos='absolute' >{container.MainHeader}</Heading>
                 </Center>
             </GridItem>
-            <GridItem colSpan={1} rowSpan={1}  pos='relative' w='30vw' >
+            <GridItem colSpan={1} rowSpan={1}  pos='relative' w='30vw' maxH='25vw'>
                 <VStack 
                 textAlign='start' 
                 pos='absolute' 
+                h="100%"
                 top='50%' 
                 transform='translateY(-50%)'
                 left='20%'
                 right='-20%'
                 >
-                        <Heading size='xl' pb={5} w="100%">
+                        <Heading fontSize='3vw' pb={5} w="100%">
                             {container.SmallHeader}
                         </Heading>
-                        <Text fontSize='xl' pb={4}>
+                        <Text fontSize='1.7vw' pb={4}>
                             {container.Paragraph1}
                         </Text>
-                        <Text fontSize='xl'>
+                        <Text fontSize='1.7vw'>
                             {container.Paragraph2}
                         </Text>
-                        <Center pt={10}>
+                        <Center pt={"2vw"}>
                             {ButtonSB(container.ButtonText)}
                         </Center>
                     </VStack>

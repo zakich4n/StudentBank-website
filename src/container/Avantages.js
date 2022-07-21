@@ -31,38 +31,45 @@ function Desktop(props) {
         templateColumns='repeat(2, 1fr)'
         gridTemplateRows={'100px 1fr'}
         gridTemplateColumns={'1fr 40vw'}
+        
         gap={4}
         {...props}
         >
             <GridItem colSpan={2}  >
-                <Center h='100%' pos='relative' >
-                    <Heading as='h2' size='2xl' pos='absolute' bottom={-8}>{container.MainHeader}</Heading>
+                <Center h='100%'  >
+                    <Heading as='h2' fontSize='4vw' >{container.MainHeader}</Heading>
                 </Center>
             </GridItem>
-            <GridItem rowSpan={1} colSpan={1}  >
-                <Box  overflow='hidden' w='100%' >
-                    <Image src={container.Image_url} />
+            <GridItem rowSpan={1} colSpan={1} w='100%' h="100%" pos='relative'  >
+                <Box  overflow='visible'  h='45vw'>
+                    <Image src={container.Image_url} 
+                    maxW="300%"
+                    width='70vw' height='auto'
+                    pos='absolute'
+                    bottom='0'
+                    />
                 </Box>
             </GridItem>
-            <GridItem colSpan={1} rowSpan={1}  pos='relative' >
+            <GridItem colSpan={1} rowSpan={1}  pos='relative' maxH='25vw'>
                 <VStack 
                 textAlign='start' 
+                h="100%"
                 pos='absolute' 
                 top='50%' 
                 transform='translateY(-50%)'
-                left='-20%'
-                right='20%'
+                left='-15%'
+                right='15%'
                 >
-                        <Heading size='xl' pb={5} w="100%">
+                        <Heading fontSize='3vw' pb={'1vw'} w="100%">
                             {container.SmallHeader}
                         </Heading>
-                        <Text fontSize='xl' pb={4}>
+                        <Text fontSize='1.7vw' pb={4}>
                             {container.Paragraph1}
                         </Text>
-                        <Text fontSize='xl'>
+                        <Text fontSize='1.7vw'>
                             {container.Paragraph2}
                         </Text>
-                        <Center pt={10}>
+                        <Center pt={"2vw"}>
                             {ButtonSB(container.ButtonText, "/application")}
                         </Center>
                     </VStack>

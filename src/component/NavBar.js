@@ -100,13 +100,20 @@ function DesktopNav(props) {
         px={10}
         boxShadow={shadow}
         fontWeight='400'
-        fontSize='23px'
+        fontSize='2.1vw'
         lineHeight='27px'
+        pos="relative"
         {...props}
         >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
         <Link as={ReachLink} to="/">
-            <Image boxSize='262px' h='100px' pt={3}  src="logo SB.png" />
+            <Image src="logo SB.png" 
+            h='100%' 
+            pos="absolute"
+            top='50%' 
+            left='10px'
+            transform='translateY(-50%)'
+            />
         </Link>
         
 
@@ -114,12 +121,12 @@ function DesktopNav(props) {
             <Stack direction={'row'}>
                 <nav>
                     {Scroll.map((item, index) => (
-                        <LinkScroll activeClass="active" style={{ "paddingLeft" : "40px" }} key={index} to={item.link} spy={true} smooth={true}>
+                        <LinkScroll activeClass="active" style={{ "paddingLeft" : "3vw" }} key={index} to={item.link} spy={true} smooth={true}>
                             {item.name}
                         </LinkScroll>
                     ))}
                     {Navigation.map((item, index) => (
-                        <Link as={ReachLink} pl={'40px'} key={index} to={item.link}>
+                        <Link as={ReachLink} pl={'3vw'} key={index} to={item.link}>
                            {item.name}
                         </Link>
                     ))}
