@@ -97,7 +97,7 @@ import {
         >
         <Container as={Stack} maxW={'6xl'} py={10}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-            <Stack align={'flex-start'} display={{md : null, base : "none"}}>
+            <Stack align={'flex-start'} display={{md : "flex", base : "none"}}>
               <ListHeader>ESPACE</ListHeader>
               <Link href={'#'}>Étudiants</Link>
               <Link href={'#'}>Étudiants étranger</Link>
@@ -135,8 +135,14 @@ import {
             </Stack>
           </SimpleGrid>
         </Container>
-        <Box py={4}>
+        <Box py={4}
+        onMouseEnter={() => {
+          console.log(document.getElementById('zaki').style.display)
+          document.getElementById('zaki').style.display='flex';
+        }}
+        >
           <Flex
+          
             align={'center'}
             _before={{
               content: '""',
@@ -150,8 +156,13 @@ import {
             }}>
             <Logo height='70px'/>
           </Flex>
-          <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-            Made with ❤️ at StudentBank
+          <Text id='zaki'  fontSize={'xs'} textAlign={'center'} color='#A0AEC0' display='none' pos='absolute' bottom={0} left='50%' transform='translateX(-50%)' >
+            Made with 🤍 by 
+
+            ZakiCh4n 
+
+            using
+            Chakra UI
           </Text>
         </Box>
       </Box>
