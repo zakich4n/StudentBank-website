@@ -33,6 +33,9 @@ export default function Contact(){
   const calenderStyle ={
      _placeholder: { color:'#737373'}
   }
+
+
+  
   return (
         <Box 
             bg={useColorModeValue('white','#231F20')}
@@ -53,7 +56,7 @@ export default function Contact(){
               <HStack  alignSelf = {'center'}>
                 <Box mt="40px">
                   <FormControl id="picker"> 
-                  <Button
+                  <Button //onClick={this.openDatepicker}
                       variant='ghost'
                       rounded={'md'}
                       leftIcon={<BiCalendarEvent
@@ -106,10 +109,10 @@ export default function Contact(){
 }
 
 
-const calendar = document.getElementById('picker');
-calendar.addEventListener('click', () =>{
-  // $('#picker').DatePicker('show');
-});
+// const calendar = document.getElementById('picker');
+// calendar.addEventListener('click', () =>{
+//   // $('#picker').DatePicker('show');
+// });
 
 
 

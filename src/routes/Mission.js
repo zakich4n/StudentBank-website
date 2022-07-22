@@ -31,7 +31,7 @@ export default function Mission(){
           bgSize='cover'
           pt={'15vh'} pb={10}>
 
-          <SimpleGrid templateRows='repeat(2, 1fr)' templateColumns='repeat(2, 1fr)' columns={2} rows={2} spacingY={50} spacingX={100} pb={39}
+          <SimpleGrid  templateColumns='repeat(2, 1fr)' spacingY={50} spacingX={100} pb={39}
              justifyContent='center' min-child-width="600px" boxSizing='border-box' width={'100'}>
               <Box bg="#11ffee00" sx={gridStyle}>
                   <Text  fontSize='3xl' fontWeight={'bold'}> Pourquoi?</Text>
