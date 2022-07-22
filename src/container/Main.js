@@ -9,13 +9,33 @@ import ButtonSB from '../component/ButtonSB'
 
 
 export default function Main(props) {
+    
 
     const setBackgroundVideo = (nb) => {
+        let cards = [ "card_banque", "card_logement", "card_mobilite"];
+        cards.splice(nb-1,1)
+
+        cards.map(card => {
+            document.getElementById(card).style.opacity=0.3
+            document.getElementById(card).style.paddingTop='150px'
+        })
+        document.getElementById('header').style.opacity=0.3
+        document.getElementById('vector').style.opacity=0.3
         const box=document.getElementById("background-video"+nb);
         box.style.display = null
     }
 
     const resetBackgroundVideo = (nb) => {
+        let cards = [ "card_banque", "card_logement", "card_mobilite"];
+        cards.splice(nb-1,1)
+
+        cards.map(card => {
+            document.getElementById(card).style.opacity=1
+            document.getElementById(card).style.paddingTop='0'
+
+        })
+        document.getElementById('header').style.opacity=1
+        document.getElementById('vector').style.opacity=1
         const box=document.getElementById("background-video"+nb);
         box.style.display = 'none';
     }
@@ -37,10 +57,10 @@ export default function Main(props) {
 
 
         <Box id='box' pos='relative' top='0'  zIndex='2'> 
-        <Image src='Vector 36.png' pos='absolute' top='130' w='100vw' />
-        <Image src='Vector 37.png' pos='absolute' top='240' w='100vw' />
+            <Image id='vector' src='Waves.png' pos='absolute' top='130' w='100vw' />
 
-            <Center >
+
+            <Center id='header' transition={"opacity 1s"}>
                 <VStack>
                     <Heading as='h1' size='3xl' mt={40} pb={5} color='white' >
                         Une banque pour les
@@ -55,7 +75,7 @@ export default function Main(props) {
             <Box  >
 
                 <Grid templateColumns='repeat(3, 1fr)' gap='3vw' mt={200} mx={10}>
-                    <GridItem onMouseEnter={
+                    <GridItem id="card_banque" onMouseEnter={
                         () => {
                             setBackgroundVideo(1)
                         }
@@ -63,10 +83,10 @@ export default function Main(props) {
                         () => {
                             resetBackgroundVideo(1)
                         }
-                    } >
+                    } transition={"opacity 1s, padding-top 1s"} >
                         {Card("Banque","Lorem ipsum dolor sit amet", "image banque.png", "banque")}
                     </GridItem>
-                    <GridItem onMouseEnter={
+                    <GridItem id="card_logement" onMouseEnter={
                         () => {
                             setBackgroundVideo(2)
                         }
@@ -74,10 +94,10 @@ export default function Main(props) {
                         () => {
                             resetBackgroundVideo(2)
                         }
-                    }  >
+                    } transition={"opacity 1s, padding-top 1s"}  >
                         {Card("Logement","Lorem ipsum dolor sit amet", "image logement.png", "logement")}
                     </GridItem>
-                    <GridItem onMouseEnter={
+                    <GridItem id="card_mobilite" onMouseEnter={
                         () => {
                             setBackgroundVideo(3)
                         }
@@ -85,7 +105,7 @@ export default function Main(props) {
                         () => {
                             resetBackgroundVideo(3)
                         }
-                    }   >
+                    }  transition={"opacity 1s, padding-top 1s"}  >
                         {Card("Mobilité","Lorem ipsum dolor sit amet", "mobilite image.png", "mobilite")}
                     </GridItem>
                 </Grid>

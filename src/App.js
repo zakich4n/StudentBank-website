@@ -15,16 +15,26 @@ const colors = {
   },
 }
 
-const theme = extendTheme({ colors })
+const theme = extendTheme({   styles: {
+  global: {
+    body: {
+      transitionProperty: "all",
+      transitionDuration: "ultra-slow"
+    }
+  }
+},
+config: {
+  disableTransitionOnChange: false
+} })
 
 
 
 
 function App() {
   return (
-    <ChakraProvider>  
+    <ChakraProvider theme={theme} >  
       <NavBar zIndex={5} /> 
-      <Outlet/> 
+      <Outlet  /> 
       <Footer/>
     </ChakraProvider>
   );
