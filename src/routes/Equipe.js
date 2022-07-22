@@ -1,4 +1,4 @@
-import { Box, Grid, Image, Link , Heading, Avatar, Flex, Text, Stack, Button, useColorModeValue} from '@chakra-ui/react';
+import { Box, SimpleGrid , Image, Link , Heading, Avatar, Flex, Text, Stack, Button, useColorModeValue} from '@chakra-ui/react';
 import { SiLinkedin } from 'react-icons/si';
 import {useEffect } from 'react';
 
@@ -12,20 +12,17 @@ export default function Equipe(){
         <Box display='flex'
             alignItems='center'
             justifyContent='center'
-            width='100%'
-            height='100%'
+            maxW ='100%'
+            maxH ='300px'
             bgImage = {useColorModeValue("url('BG_equipe_light.png')" ,"url('BG_equipe_dark.png')")}
             bgPosition="center" 
             bgRepeat="no-repeat"
-            bgSize='cover'
-            pt={'50vh'}>
-            <Grid zIndex={0}   display='grid' templateColumns="repeat(5, 1fr)" p={50} margin={0}>
-                <Box p={8}
-                    maxW={'200px'}
+            bgSize='cover' pt={'5vh'}>
+            <SimpleGrid templateColumns="repeat(1, 1fr)"  templateRows="repeat(5, 1fr)" pt='150vh'>
+                <Box p={4}
+                    maxW={'600px'}
                     w={'full'}
-                    rounded={'md'}
-                    overflow={'hidden'}>
-                    
+                    rounded={'md'}>  
                     <Image
                     h={'100px'}
                     w={'full'}
@@ -58,7 +55,7 @@ export default function Equipe(){
                         </Stack>
                     </Stack>
                 </Box>             
-                <Box p={8}
+                <Box p={4}
                     maxW={'200px'}
                     w={'full'}
                     rounded={'md'}
@@ -95,7 +92,7 @@ export default function Equipe(){
                         </Stack>
                     </Stack>
                 </Box>             
-                <Box p={8}
+                <Box p={4}
                     maxW={'200px'}
                     w={'full'}
                     rounded={'md'}
@@ -132,7 +129,7 @@ export default function Equipe(){
                         </Stack>
                     </Stack>
                 </Box>
-                 <Box p={8}
+                 <Box p={4}
                     maxW={'200px'}
                     w={'full'}
                     rounded={'md'}
@@ -169,7 +166,7 @@ export default function Equipe(){
                         </Stack>
                     </Stack>
                 </Box>             
-                 <Box p={8}
+                 <Box p={4}
                     maxW={'200px'}
                     w={'full'}
                     rounded={'md'}
@@ -206,7 +203,7 @@ export default function Equipe(){
                         </Stack>
                     </Stack>
                 </Box>          
-            </Grid>
+            </SimpleGrid>
         </Box>
     </div>
   )
