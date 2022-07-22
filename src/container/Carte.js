@@ -105,21 +105,21 @@ function Mobile(props) {
             bg : 'white'
         },{
             Image_url :"mockupdarkcard black.png",
-            bg : null
+            bg : "#231F20"
         })
     }
     return (
         <Box {...props}
-        w='100vw' h='58vh' minH={'480px'} bg='white'
+        w='100vw' h='58vh' minH={'480px'} bg={container.theme.bg}
         >
                <Grid >
                     <GridItem h={'50px'}>
-                        <Heading as="h1" size='xl' pl={8} pt={2} >Nos cartes </Heading>
+                        <Heading as="h1" size='2xl'  pl={8} pt={2} >Nos cartes </Heading>
                     </GridItem>
 
                     <GridItem pos='relative' h={"55vw"} maxH={'300px'} >
                         <Image 
-                        src='whitecard_mockup 1.png'  
+                        src={container.theme.Image_url}
                         pos='absolute' 
                         w='90%' maxW={'450px'}
                         left='50%' 

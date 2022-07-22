@@ -73,7 +73,7 @@ function Desktop(props) {
 function Mobile(props) {
     return (
         <Box {...props}>
-            <Box bg='white' h='35vh' w="100vw"  minH='220px' pos='relative' >
+            <Box bg={useColorModeValue('white',"#231F20")} h='35vh' w="100vw"  minH='220px' pos='relative' >
 
                 <Box 
                 pos='absolute' 

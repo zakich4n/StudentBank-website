@@ -17,12 +17,13 @@ export default function Main(props) {
 
         cards.map(card => {
             document.getElementById(card).style.opacity=0.3
-            document.getElementById(card).style.paddingTop='150px'
+            document.getElementById(card).style.paddingTop='100px'
+
         })
         document.getElementById('header').style.opacity=0.3
         document.getElementById('vector').style.opacity=0.3
         const box=document.getElementById("background-video"+nb);
-        box.style.display = null
+        box.style.display = null;
     }
 
     const resetBackgroundVideo = (nb) => {
@@ -33,11 +34,13 @@ export default function Main(props) {
             document.getElementById(card).style.opacity=1
             document.getElementById(card).style.paddingTop='0'
 
+
         })
         document.getElementById('header').style.opacity=1
         document.getElementById('vector').style.opacity=1
         const box=document.getElementById("background-video"+nb);
         box.style.display = 'none';
+
     }
     // https://assets.codepen.io/6093409/river.mp4
     // https://static.videezy.com/system/resources/previews/000/044/479/original/banana.mp4 
@@ -57,7 +60,7 @@ export default function Main(props) {
 
 
         <Box id='box' pos='relative' top='0'  zIndex='2'> 
-            <Image id='vector' src='Waves.png' pos='absolute' top='130' w='100vw' />
+            <Image id='vector' src='Waves.png' pos='absolute' top='130' w='100vw' transition={"opacity 1s"} />
 
 
             <Center id='header' transition={"opacity 1s"}>
@@ -74,7 +77,7 @@ export default function Main(props) {
 
             <Box  >
 
-                <Grid templateColumns='repeat(3, 1fr)' gap='3vw' mt={200} mx={10}>
+                <Grid templateColumns='repeat(3, 1fr)' gap='3vw' mt={"15vh"} mx={10} mb={15}>
                     <GridItem id="card_banque" onMouseEnter={
                         () => {
                             setBackgroundVideo(1)
