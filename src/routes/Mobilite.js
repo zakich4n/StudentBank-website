@@ -5,7 +5,7 @@ import { VStack } from "@chakra-ui/react"
 import { useColorModeValue } from "@chakra-ui/react"
 
 
-export default function Logement(){
+export default function Mobilite(){
     useEffect(() => {
         window.scrollTo(0,0);
     });
