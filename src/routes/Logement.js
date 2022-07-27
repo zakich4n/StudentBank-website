@@ -1,7 +1,5 @@
-import { Box, VStack, Stack} from '@chakra-ui/react'
-import { FormControl, Input, Button, Select,SimpleGrid, Link, Avatar, AvatarBadge } from '@chakra-ui/react';
+import { Box, VStack, Stack, FormControl, Input, Button, Select,SimpleGrid, Link, Avatar, AvatarBadge,useColorModeValue } from '@chakra-ui/react';
 import { BiCamera } from "react-icons/bi";
-import { useColorModeValue } from "@chakra-ui/react"
 import {useEffect } from 'react';
 
 export default function Logement(){
