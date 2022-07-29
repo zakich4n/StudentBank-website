@@ -25,6 +25,7 @@ export default function Contact(){
     border:'2px',
     borderColor: useColorModeValue('black', 'white'),
     borderRadius: "8",
+    color:'#323232',
     bg: useColorModeValue('#11ffee00','white'),
     _placeholder: { color:'#737373'}
   }
@@ -51,7 +52,7 @@ export default function Contact(){
           <VStack spacing={3} align="center" marginLeft='7vw' marginRight='7vw'>
             <Box mt="50px">
               <Stack  spacing={4} width={"100%"}>
-              <Text sx= {innerBoxStyles} fontSize={['3xl','5xl','6xl']}>Prendre rendez-vous</Text>
+              <Text sx= {innerBoxStyles} fontSize={['2xl','3xl','5xl','6xl']}>Prendre rendez-vous</Text>
               <HStack  alignSelf = {'center'}>
                 <Box mt="40px">
                   <FormControl id="picker"> 
@@ -70,7 +71,7 @@ export default function Contact(){
                 </Box>
               </HStack>
               <FormControl id="motif">
-                <Select sx = {formStyle} placeholder="Motif du rendez-vous"  color={useColorModeValue('#737373','#737373')} />
+                <Select sx = {formStyle} placeholder="Motif du rendez-vous" />
               </FormControl>
                 <FormControl id="nom">
                 <Input sx = {formStyle} type="text"  placeholder="Nom*"  isRequired/>
