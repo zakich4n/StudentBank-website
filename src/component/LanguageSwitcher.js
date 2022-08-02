@@ -11,8 +11,9 @@ import {
     useColorModeValue
   } from '@chakra-ui/react';
   
-  import { BsThreeDotsVertical } from 'react-icons/bs';
+  import { GrLanguage } from 'react-icons/gr';
   import { FaRegFlag } from 'react-icons/fa';
+import { BsFillNodePlusFill } from 'react-icons/bs';
   
   export default function ServerSecondaryOptions(props) {
     const background_color=useColorModeValue('white','rgba(53, 53, 53, 1)');
@@ -25,11 +26,12 @@ import {
           <PopoverTrigger>
             <IconButton
               aria-label="Selection de la langue"
-              icon={<BsThreeDotsVertical />}
+              icon={<GrLanguage />}
               variant="solid"
-              w="fit-content"
+              size={{base : 'lg', md : 'md'}}
               {...props}
             />
+
           </PopoverTrigger>
           <PopoverContent w="fit-content" _focus={{ boxShadow: 'none' }} bg={ background_color}>
             <PopoverArrow />

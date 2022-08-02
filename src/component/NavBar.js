@@ -198,13 +198,10 @@ function MobileNavBar(props) {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerHeader>
-                <HStack spacing='20vw'>
-                    <DrawerCloseButton position="relative" ml={5} size='xl' /> 
-                    <Link as={ReachLink} to="/" onClick={onClose}>
-                        <Image h={10}  src="MobilLogoSB.png" />
-                    </Link>              
-                </HStack>
-
+                <DrawerCloseButton position="relative" ml={5} size='xl' top='50%' transform={'translateY("-50%")'} /> 
+                <Link as={ReachLink} to="/" onClick={onClose} pos='relative' left='40%' transform={'translateX("-50%")'}>
+                    <Image h={10}  src="MobilLogoSB.png" />
+                </Link>              
             </DrawerHeader>
   
             <DrawerBody>
@@ -240,8 +237,8 @@ function MobileNavBar(props) {
               </VStack>
             </DrawerBody>
   
-            <DrawerFooter>
-            <LanguageSwitcher  />
+            <DrawerFooter pb={100}>
+            <LanguageSwitcher variant='outline' colorScheme='dark' />
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
