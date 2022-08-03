@@ -27,7 +27,7 @@ import {
 import {
     Link as LinkScroll
 } from 'react-scroll';
-import { GrMenu } from 'react-icons/gr'
+import { GrBold, GrMenu } from 'react-icons/gr'
 
 import ColorModeSwitcher from './ColorModeSwitcher';
 import LanguageSwitcher from './LanguageSwitcher'
@@ -119,9 +119,26 @@ function DesktopNav(props) {
 
         <Flex alignItems={'center'}>
             <Stack direction={'row'}>
-                <nav>
+                <nav
+                >
                     {Scroll.map((item, index) => (
-                        <LinkScroll activeClass="active" style={{ "paddingLeft" : "3vw" }} key={index} to={item.link} spy={true} smooth={true}>
+                        <LinkScroll 
+                        id={"link"+index}
+                        activeClass="active" 
+                        style={{ "paddingLeft" : "3vw" } } 
+                        key={index} 
+                        to={item.link} 
+                        spy={true} 
+                        smooth={true}
+                        onMouseEnter={() => {
+                            document.getElementById("link"+index).style.textDecoration='underline'
+                            document.getElementById("link"+index).style.cursor='pointer'
+                        }}
+                        onMouseLeave={() => {
+                            document.getElementById("link"+index).style.textDecoration='none'
+                            document.getElementById("link"+index).style.cursor='autos'
+                        }}
+                        >
                             {item.name}
                         </LinkScroll>
                     ))}
@@ -214,12 +231,21 @@ function MobileNavBar(props) {
               >
               {Scroll.map((item, index) => (
                         <LinkScroll 
+                        id={"linkMobile"+index}
                         activeClass="active" 
                         key={index} 
                         to={item.link} 
                         spy={true} 
                         smooth={true}
                         onClick={onClose}
+                        onMouseEnter={() => {
+                            document.getElementById("linkMobile"+index).style.textDecoration='underline'
+                            document.getElementById("linkMobile"+index).style.cursor='pointer'
+                        }}
+                        onMouseLeave={() => {
+                            document.getElementById("linkMobile"+index).style.textDecoration='none'
+                            document.getElementById("linkMobile"+index).style.cursor='autos'
+                        }}
                         >
                             {item.name}
                         </LinkScroll>
