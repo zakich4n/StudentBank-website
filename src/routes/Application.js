@@ -25,12 +25,12 @@ export default function Logement(){
         <Show breakpoint='(max-width: 440px)'>
             <SimpleGrid templateColumns='repeat(1, 1fr)' pt={10}>
                 <Box pb={3}>
-                    <Text textAlign='center' fontSize='2xl' fontWeight='bold'  fontFamily='Roboto'>
+                    <Text textAlign='center' fontSize='2xl' fontWeight='bold'  >
                             Rejoins nous !
                     </Text>
                 </Box>
                 <Box>
-                    <Text textAlign='center' fontSize='sm' fontWeight='light' fontFamily='Roboto' paddingLeft='5vw' paddingRight='5vw'>
+                    <Text textAlign='center' fontSize='sm' fontWeight='light'  paddingLeft='5vw' paddingRight='5vw'>
                             Téléchargez l’application mobile StudentBank et venez découvrir un nouveau 
                             moyen de gérer votre argent, adapté aux besoins des étudiants !
                     </Text>
@@ -44,7 +44,7 @@ export default function Logement(){
                     </Link>
                 </Box>
                 <Box>
-                    <Text textAlign='center' fontSize='sm' fontWeight='light' fontFamily='Roboto' paddingLeft='5vw' paddingRight='5vw'>
+                    <Text textAlign='center' fontSize='sm' fontWeight='light'  paddingLeft='5vw' paddingRight='5vw'>
                         En plus de ça profite d’un réseaux d’étudiant dans toute la France et 
                         des avantages exclusifs dans plus de x enseignes ! 
                     </Text>
