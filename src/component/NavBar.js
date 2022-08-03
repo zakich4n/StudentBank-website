@@ -141,13 +141,12 @@ function DesktopNav(props) {
 function MobileNavBar(props) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
-
-    const background_color=useColorModeValue('white','rgba(53, 53, 53, 1)');
+    const drawerBg=useColorModeValue('red','white');
     const shadow=useColorModeValue('xl','dark-lg');
 
     return ( 
     <Box 
-    bg={background_color}
+    bg="white"
     h='55px'
 /*     minH='35px'
     maxH='50px' */
@@ -176,6 +175,7 @@ function MobileNavBar(props) {
             </Box>
                
             <Box
+            
             pos='absolute'
             top='50%'
             transform={'translateY(-50%)'} 
@@ -187,6 +187,7 @@ function MobileNavBar(props) {
 
 
         <Drawer
+        id="zaki"
           isOpen={isOpen}
           size='full'
           placement='left'

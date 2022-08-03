@@ -94,8 +94,8 @@ function Mobile(props) {
                     pos='absolute' />
                 </Box>
             </Box>  
-            <Box  h='25vh' minH={'200px'} maxH={'300px'} w='100vw'    z-index="2">
-                <Text py={'5vw'} px={'3vw'} fontSize='3.8 vw'>
+            <Box  h='25vh' minH={'200px'} maxH={'300px'} w='100vw'  bgGradient={useColorModeValue(null,'linear(to-l, rgba(237, 23, 76, 0.3), rgba(245, 130, 32, 0.3))')}  z-index="2">
+                <Text py={'5vw'} px={'3vw'} fontSize='3.6vw' >
                     Avec Studentbank, la banque 100% en ligne faite par et pour les étudiants, ouvrez votre compte bancaire depuis votre salle de classe en 5 min sans frais, ni commissions.
                 </Text>
                 <Box pl={'5vw'} >

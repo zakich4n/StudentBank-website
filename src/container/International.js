@@ -80,7 +80,9 @@ function Mobile(props) {
         pos='relative'
         h='120vw' 
         minH={"390px"}
-        bgGradient={'linear(to-r, rgba(251, 203, 194, 0.7), rgba(251, 203, 194, 0.7))'}
+        bgGradient={useColorModeValue('linear(to-r, rgba(251, 203, 194, 0.7), rgba(251, 203, 194, 0.7))','linear(to-l, rgba(237, 23, 76, 0.3), rgba(245, 130, 32, 0.3))')}
+
+        
         >
 
             <Grid

@@ -125,7 +125,7 @@ function Mobile(props) {
             w='150%' 
             h='100%'
             overflow='hidden' 
-            maxWidth='200%' 
+            maxWidth='100%' 
             left='50%' 
             transform={'translateX(-50%)'} 
             />

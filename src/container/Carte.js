@@ -128,7 +128,7 @@ function Mobile(props) {
                         <Text pos='absolute' bottom={'10px'} right={'max(15vw,50px)'} fontWeight={700} >MAYA</Text>                        
                     </GridItem>
                     <GridItem my={6} mx={10}  >
-                        <Text  fontSize='md'>
+                        <Text  fontSize='3.6vw' >
                             Payez en ligne, en magasin ou dans vos sites favoris, sans frais et en toute sécurité. Nos cartes ENKI, MAYA, HORIZON et EXOTIC vous assurent dans tous vos voyages et la gratuité des frais de retrait à l’international.
                         </Text>                        
                     </GridItem>

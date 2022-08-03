@@ -84,18 +84,18 @@ function Mobile(props) {
         pos='relative'
         h='65vh' 
         minH={"330px"}
-        bgGradient={'linear(to-r, rgba(251, 203, 194, 0.7), rgba(251, 203, 194, 0.7))'}
+        bgGradient={useColorModeValue('linear(to-r, rgba(251, 203, 194, 0.7), rgba(251, 203, 194, 0.7))','linear(to-l, rgba(237, 23, 76, 0.3), rgba(245, 130, 32, 0.3))')}
         >
             <Image 
             src={container.Image_url} 
             pos='absolute' 
-            opacity={'0.3'} 
+            opacity={'0.14'} 
             objectFit='cover' 
             w='150%' 
             h='60%'
             bottom={0}
             overflow='hidden' 
-            maxWidth='200%' 
+            maxWidth='100%' 
             left='50%' 
             transform={'translateX(-50%)'} 
             />
