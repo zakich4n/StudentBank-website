@@ -8,8 +8,9 @@ export default function Logement(){
     border:'2px',
     borderColor: useColorModeValue('black', 'white'),
     borderRadius: "8",
+    color:'#323232',
     bg: useColorModeValue('#11ffee00','white'),
-    _placeholder: { color:useColorModeValue('#737373', '#737373')}
+    _placeholder: { color:'#737373'},
   }
 
   return (
