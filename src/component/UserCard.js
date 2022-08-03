@@ -16,7 +16,7 @@ import {
     BsLinkedin
 } from 'react-icons/bs'
 
-export default function Card(name, username, photo_url, description, tag=[]) {
+export default function Card(name, username, photo_url, description, tag=[], props) {
     const colorMode = useColorModeValue({
         bgTag : "gray.50",
         descriptionColor : "gray.700"
@@ -26,7 +26,7 @@ export default function Card(name, username, photo_url, description, tag=[]) {
     })
     const bgTag= useColorModeValue('gray.50', 'gray.800')
     return (
-      <Center py={6}>
+      <Center py={6} {...props}>
         <Box
           maxW={'320px'}
           w={'full'}
